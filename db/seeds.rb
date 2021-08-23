@@ -20,6 +20,6 @@ baf = Event.create(
   description: "Lets eat that good brazilian food.",
   location: "Falckensteinstraße 35, 10997 Berlin",
   start_time: DateTime.parse("09/12/2021 14:00"),
-  start_time: DateTime.parse("09/12/2029 17:00"),
+  end_time: DateTime.parse("09/12/2029 17:00"),
   user: marina
 )
