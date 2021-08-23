@@ -11,7 +11,16 @@ class EventsController < ApplicationController
 
   def upcomingindex
     @events = Event.all
-    @past_events = @events.end_time >= Date.today
+    @upcoming_events = @events.end_time >= Date.today
+  end
+
+  def show
+    @event = Event.find(params[:id])
+    if @event.end_time <= Date.today
+      render :show
+    else
+      render :pastshow
+    end
   end
 
   def new
