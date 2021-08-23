@@ -1,26 +1,12 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
-  end
-
-  def pastindex
-    @events = Event.all
-    @past_events = @events.end_time <= Date.today
-  end
-
-  def upcomingindex
-    @events = Event.all
-    @upcoming_events = @events.end_time >= Date.today
+    @events =  Event.all
+    #@events = Event.where(current_user.invitation_token?)
   end
 
   def show
     @event = Event.find(params[:id])
-    if @event.end_time <= Date.today
-      render :show
-    else
-      render :pastshow
-    end
   end
 
   def new
@@ -39,10 +25,11 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
   end
 
   def update
-    @event.update(shoe_params)
+    @event.update(event_params)
     redirect to event_path(@event)
   end
 
