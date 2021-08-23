@@ -4,6 +4,11 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def show
+    @event = Event.find(params[:id])
+    @message = Message.new
+  end
+
   def new
     @event = Event.new
   end
