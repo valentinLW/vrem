@@ -5,14 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-puts "creating marina"
-marina = User.create(
-  nickname: 'mariana',
-  email: 'marina@obuvnb.com',
-  password: '123456',
-  password_confirmation: '123456'
-)
+users = []
+names = %w[marina ruy valentin stan]
+names.each do |user|
+  puts "creating #{user}"
+  user = User.create(
+    nickname: user,
+    email: "#{user}@vrem.com",
+    password: '123456',
+    password_confirmation: '123456'
+  )
+  users << user
+end
 
 puts "creating Breakfast at Filipes"
 baf = Event.create(
