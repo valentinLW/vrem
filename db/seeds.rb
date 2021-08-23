@@ -19,6 +19,6 @@ baf = Event.new(
   location: "Falckensteinstraße 35, 10997 Berlin",
   start_time: DateTime.parse("09/12/2021 14:00"),
   end_time: DateTime.parse("09/12/2029 17:00"),
-  user: users.sample
+  user: users[0] # marina
 )
 baf.save!
