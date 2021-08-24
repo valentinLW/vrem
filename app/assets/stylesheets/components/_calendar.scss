@@ -1,35 +1,54 @@
+.container {
+  padding-right: 0 !important;
+}
 .simple-calendar {
   font-weight: 600;
-  color: white;
+  color: #673c4f;
   opacity: 70%;
+  height: 18px;
 
   table {
     border: none;
     table-layout: fixed;
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 6px;
+  }
+
+  th {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border: 2px #673c4f;
+    border-radius: 50%;
+    background-color: #f1d2e0;
+    opacity: 50%;
+    height: 12px;
+    width: 12px;
+  }
+
+  td {
+    font-weight: 600;
+    color: white;
   }
 
   th,
   td {
     border: none;
     overflow: hidden;
-    font-weight: 600;
-    color: white;
-    opacity: 70%;
+    opacity: 90%;
   }
 
    .calendar-heading {
-     margin-bottom: 16px;
+     margin-bottom: 10px;
    }
 
   .day {
     text-align: center;
-    background: rgb(137, 62, 111);
-    background: linear-gradient(212deg, rgba(137, 62, 111, 1) 0%, rgba(253, 242, 231, 1) 96%, rgba(237, 229, 235, 1) 100%);
+    text-shadow: 1px 1px #fc9bc6;
+    background-color: #50adb9;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    border-radius: 7px;
-    margin: 7px;
+    border-radius: 2px;
+    height: 65px
 
   }
 
@@ -48,16 +67,16 @@
   .wday-6 {}
 
   .today {
-    background: rgb(62, 137, 137);
-    background: linear-gradient(146deg, rgba(62, 137, 137, 1) 0%, rgba(253, 242, 231, 1) 0%, rgba(66, 107, 105, 1) 100%);
+    background-color: #854f37;
   }
 
   .past {
-    background: rgb(137, 62, 111);
-    background: linear-gradient(67deg, rgba(137, 62, 111, 1) 0%, rgba(253, 242, 231, 1) 96%, rgba(237, 229, 235, 1) 100%);
   }
 
-  .future {}
+  .future {
+    background-color: #673C4F;
+
+  }
 
   .start-date {}
 
@@ -68,7 +87,11 @@
   .current-month {}
 
   .has-events {
-    background: rgb(103, 62, 137);
-    background: linear-gradient(301deg, rgba(103, 62, 137, 1) 11%, rgba(231, 245, 253, 1) 51%, rgba(66, 81, 107, 1) 93%);
+    background-color: #E5EDEB;
+  }
+
+  .has-events:hover,
+  .has-events:active {
+    height: 100px;
   }
 }

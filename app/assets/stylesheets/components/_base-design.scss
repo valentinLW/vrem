@@ -11,4 +11,25 @@ main > div {
     width: 75%;
     height: 100%;
     margin-top: 10%;
+    opacity: 75%;
+}
+
+@media screen and (max-width: 400px) {
+  main>div {
+    width: 75%;
+  }
+
+  div.header {
+    height: 40px;
+  }
+
+  div.header>img {
+    width: 160px;
+    height: 80px;
+    left: 35px;
+  }
+
+  div.footer {
+    height: 50px;
+  }
 }
