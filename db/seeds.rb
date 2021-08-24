@@ -22,3 +22,13 @@ baf = Event.new(
   user: users[0] # marina
 )
 baf.save!
+
+messages = ["hi", "hey", "yo", "whos coming?", "me", "me", "maybe", "should i bring some beers", "what exactly are we doing and how long will we be there?"]
+messages.each do |message|
+  Message.new(
+    content: message,
+    event: baf,
+    user: users.sample
+  )
+  Message.save!
+end
