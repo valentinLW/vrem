@@ -2,26 +2,6 @@ body {
     background-color: #fff;
 }
 
-.square1 {
-    position: absolute;
-    background-color: #e6edeb;
-    width: 300px;
-    height: 500px;
-    top: 350px;
-    left: 0;
-    opacity: 0.5;
-}
-
-.square2 {
-    position: absolute;
-    background-color: #e7f7fc;
-    width: 300px;
-    height: 500px;
-    left: 200px;
-    top: 750px;
-    opacity: 0.5;
-}
-
 main > div {
     position: absolute;
     background: asset-url('bg.png');
