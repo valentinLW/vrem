@@ -73,11 +73,21 @@ baf = {
   messages: basic_messages
 }
 
+baf2 = {
+  name: "Breakfast at Marianas",
+  description: "Lets eat that good chinese food.",
+  location: "Hermanstrasse 35, 10997 Berlin",
+  start_time: DateTime.parse("12/09/2021 11:00"),
+  end_time: DateTime.parse("12/09/2021 12:00"),
+  host: users[1], # marina
+  messages: basic_messages
+}
+
 events = []
 
 # dont create custom events twice
 if Event.where(name: "Breakfast at Filipes").length.zero?
-  events << baf
+  events << baf || baf2
 end
 
 # random events

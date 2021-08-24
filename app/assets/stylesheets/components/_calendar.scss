@@ -1,0 +1,97 @@
+.container {
+  padding-right: 0 !important;
+}
+.simple-calendar {
+  font-weight: 600;
+  color: #673c4f;
+  opacity: 70%;
+  height: 18px;
+
+  table {
+    border: none;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 6px;
+  }
+
+  th {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border: 2px #673c4f;
+    border-radius: 50%;
+    background-color: #f1d2e0;
+    opacity: 50%;
+    height: 12px;
+    width: 12px;
+  }
+
+  td {
+    font-weight: 600;
+    color: white;
+  }
+
+  th,
+  td {
+    border: none;
+    overflow: hidden;
+    opacity: 90%;
+  }
+
+   .calendar-heading {
+     margin-bottom: 10px;
+   }
+
+  .day {
+    text-align: center;
+    text-shadow: 1px 1px #fc9bc6;
+    background-color: #50adb9;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    height: 65px
+
+  }
+
+  .wday-0 {}
+
+  .wday-1 {}
+
+  .wday-2 {}
+
+  .wday-3 {}
+
+  .wday-4 {}
+
+  .wday-5 {}
+
+  .wday-6 {}
+
+  .today {
+    background-color: #854f37;
+  }
+
+  .past {
+  }
+
+  .future {
+    background-color: #673C4F;
+
+  }
+
+  .start-date {}
+
+  .prev-month {}
+
+  .next-month {}
+
+  .current-month {}
+
+  .has-events {
+    background-color: #E5EDEB;
+  }
+
+  .has-events:hover,
+  .has-events:active {
+    height: 100px;
+  }
+}
