@@ -1,0 +1,70 @@
+#messages, form {
+  padding: 0 0.5rem;
+  padding-top: 0.5rem;
+}
+
+#messages {
+  font-size: 1.25rem;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  overflow: scroll;
+}
+
+.chat-input {
+  form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  input {
+    border-radius: 1.15rem;
+  }
+}
+
+.message-container {
+  p {
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem .875rem;
+    word-wrap: break-word;
+    margin-bottom: 0;
+  }
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container {
+  .me {
+    margin-left: auto;
+  }
+  p.me {
+    margin-left: auto;
+    background-color: $aubergine;
+    color: #fff;
+  }
+
+  .others {
+    margin-right: auto;
+  }
+  p.others {
+    background-color: #004837;
+    opacity: 40%;
+    color: white;
+  }
+}
+
+.message-container {
+  .nickname {
+    font-size: 70%;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+    font-style: normal;
+  }
+}
