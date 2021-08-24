@@ -1,4 +1,8 @@
 class InvitationsController < ApplicationController
+  def index
+    @users = User.all
+  end
+
   def create
     @invitation = Invitation.new(invitation_params)
   end
