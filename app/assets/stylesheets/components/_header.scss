@@ -3,8 +3,15 @@ div.header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 150px;
     width: 100%;
     left: 0;
     top: 0;
+}
+
+div.header > img {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    left: 70px;
 }
