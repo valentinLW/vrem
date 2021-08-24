@@ -5,9 +5,7 @@ body {
 main > div {
     position: absolute;
     background: asset-url('bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     width: 75%;
     height: 100%;
     margin-top: 10%;
