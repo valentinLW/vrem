@@ -45,7 +45,7 @@
   }
   p.me {
     margin-left: auto;
-    background-color: #248bf5;
+    background-color: $aubergine;
     color: #fff;
   }
 
@@ -53,8 +53,9 @@
     margin-right: auto;
   }
   p.others {
-    background-color: #e5e5ea;
-    color: #000;
+    background-color: #004837;
+    opacity: 40%;
+    color: white;
   }
 }
 
