@@ -21,3 +21,14 @@ body {
     top: 750px;
     opacity: 0.5;
 }
+
+main > div {
+    position: absolute;
+    background: asset-url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 100%;
+    margin-top: 10%;
+}
