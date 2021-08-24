@@ -1,10 +1,10 @@
 <div class="newform col-10">
-  <%= simple_form_for([event], ) do |f| %>
+  <%= simple_form_for(event) do |f| %>
     <%= f.input :name %>
     <%= f.input :start_time, :order => [:day, :month, :year] %>
     <%= f.input :end_time, :order => [:day, :month, :year] %>
     <%= f.input :location %>
     <%= f.input :description %>
-    <%= f.submit "create", class: "btn create-btn" %>
+    <%= f.submit class: "btn create-btn" %>
   <% end %>
 </div>
