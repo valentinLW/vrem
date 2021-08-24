@@ -42,8 +42,7 @@ class EventsController < ApplicationController
       :description,
       :location,
       :start_time,
-      :end_time,
-      #:image
+      :end_time
     )
   end
 end
