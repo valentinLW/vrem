@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
+    @events =  Event.all
+    #@events = Event.where(current_user.invitation_token?)
   end
 
   def show
@@ -25,10 +26,11 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
   end
 
   def update
-    @event.update(shoe_params)
+    @event.update(event_params)
     redirect to event_path(@event)
   end
 

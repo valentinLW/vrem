@@ -1,0 +1,4 @@
+<div class="message-container" id="message-<%= message.id %>">
+  <p class="<%= message.user == current_user ? 'me' : 'others' %>"><%= message.content %></p>
+  <i class="nickname <%= message.user == current_user ? 'me' : 'others' %>"><%= message.user.nickname %></i>
+</div>
