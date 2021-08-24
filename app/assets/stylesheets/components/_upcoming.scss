@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 190px;
+  background: transparent;
+}
+
+.date {
+  text-align: right;
+  color: #673c4f;
+ }
+
+.eventcards {
+  display: flex;
+  flex-direction: column;
+  background: #00000015;
+  border: 0.5px solid rgba(128, 128, 128, 0.505);
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.img {
+  height: 85px;
+  margin: 10px;
+  border: 0.2px dotted rgba(128, 128, 128, 0.505);
+}
+
+.name {
+  margin: 10px;
+  text-align: center;
+  color: #673c4f;
+}
+
+h3 {
+  font-size: 4vw;
+}
+
+.name:hover {
+  color: #7a7a7a
+}
