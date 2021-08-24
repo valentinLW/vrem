@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.5px solid rgba(128, 128, 128, 0.505);
+  height: 200px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+ .date {
+ }

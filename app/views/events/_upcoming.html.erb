@@ -1,0 +1,12 @@
+
+<% events.each do |event|%>
+  <% if event.end_time > Date.today %>
+    <div class="container col-6">
+      <div class="img"><img src="" alt="Picture Place"></div>
+      <div class="info">
+        <div class="name"><h3><%= event.name %></h2></div>
+        <div class="date"><%= event.start_time.strftime("%d.%m.%Y") %></div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
