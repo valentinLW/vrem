@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @events =  Event.all
+    @events = Event.all
     #@events = Event.where(current_user.invitation_token?)
   end
 
@@ -43,7 +43,7 @@ class EventsController < ApplicationController
       :location,
       :start_time,
       :end_time,
-      :image
+      #:image
     )
   end
 end
