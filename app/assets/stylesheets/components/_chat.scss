@@ -1,16 +1,21 @@
+#messages, form {
+  padding: 0 0.5rem;
+  padding-top: 0.5rem;
+}
+
 #messages {
   font-size: 1.25rem;
   width: 100vw;
   height: 80vh;
   position: relative;
+  overflow: scroll;
 }
 
-#messages {
+.chat-input {
   form {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 0 0.5rem;
   }
 
   input {
@@ -25,22 +30,40 @@
     max-width: 75%;
     padding: 0.5rem .875rem;
     word-wrap: break-word;
+    margin-bottom: 0;
   }
 }
 
 .message-container {
   display: flex;
-  padding: 0 0.5rem;
+  flex-direction: column;
 }
 
 .message-container {
-  p.my-message {
+  .me {
+    margin-left: auto;
+  }
+  p.me {
     margin-left: auto;
     background-color: #248bf5;
     color: #fff;
   }
-  p.others-message {
+
+  .others {
+    margin-right: auto;
+  }
+  p.others {
     background-color: #e5e5ea;
     color: #000;
+  }
+}
+
+.message-container {
+  .nickname {
+    font-size: 70%;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+    font-style: normal;
   }
 }
