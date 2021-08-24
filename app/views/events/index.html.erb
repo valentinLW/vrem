@@ -1,10 +1,1 @@
-<% @events.each do |event|%>
-  <% if event.end_time > Date.today %>
-    <div class="eventcard">
-      <%= event.name %>
-      <!--
-      <%= cl_image_tag event.image.key %>
-      -->
-    </div>
-  <% end %>
-<% end %>
+    <%= render 'events/calendar' %>
