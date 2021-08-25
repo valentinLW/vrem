@@ -1,0 +1,30 @@
+<% if @event.end_time > Date.today %>
+    <div class="container col-6">
+      <div class="links">
+        <%= link_to((event_chat_path(@event)), :class => 'btn btn-danger') do %>
+          <p>CHAT</p>
+        <% end%>
+    </div>
+<% else %>
+    <div class="container col-6">
+      <div class="links">
+        <%= link_to((event_chat_path(@event)), :class => 'btn btn-success') do %>
+          <p>MEDIA</p>
+        <% end%>
+      </div>
+<% end %>
+
+<% if @event.start_time < Date.today %>
+    <div class="container col-6">
+      <div class="links">
+        <%= link_to((event_chat_path(@event)), :class => 'btn btn-danger') do %>
+          <p>Upload Photos</p>
+        <% end%>
+    </div>
+<% end %>
+
+<div class="links">
+  <%= link_to(events_path, :class => 'btn btn-primary') do %>
+    <p>Dashboard</p>
+  <% end%>
+</div>
