@@ -1,5 +1,4 @@
 <% if @invitation && @invitation.status == "pending" %>
-<% raise %>
   <%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
     <p>Accept</p>
   <% end %>
