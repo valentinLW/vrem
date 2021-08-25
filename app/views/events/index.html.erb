@@ -7,13 +7,13 @@
   </div>
   <div class="swiper-wrapper">
     <div class="swiper-slide">'
-      <%= render 'events/calendar' %>
-    </div>
-    <div class="swiper-slide">
       <%= render "upcoming", events:@events %>
     </div>
     <div class="swiper-slide">
       Invitations
+    </div>
+    <div class="swiper-slide">
+      <%= render 'events/calendar' %>
     </div>
   </div>
   <div class="swiper-pagination"></div>

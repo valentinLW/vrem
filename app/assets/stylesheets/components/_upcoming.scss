@@ -1,4 +1,4 @@
-.container {
+.upcontainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,11 +31,12 @@
   margin: 10px;
   text-align: center;
   color: #673c4f;
-  font-family: sansa;
+  font-family: Jost;
 }
 
 h2 {
   font-size: 4vw;
+  text-align: center;
 }
 
 .name:hover {
