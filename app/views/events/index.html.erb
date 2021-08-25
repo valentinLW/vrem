@@ -1,2 +1,8 @@
+<div class="links">
+  <%= link_to((destroy_user_session_path), method: :delete, :class => 'btn btn-info') do %>
+    <p>Logout</p>
+  <% end%>
+</div>
+
 <%= render 'events/calendar' %>
 <%= render "upcoming", events:@events %>

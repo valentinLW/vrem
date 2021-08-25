@@ -1,0 +1,8 @@
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  .links {
+    display: block
+  }
+}
