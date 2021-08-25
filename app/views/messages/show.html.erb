@@ -1,3 +1,9 @@
+<div class="links">
+  <%= link_to((event_path(@event)), :class => 'btn btn-info') do %>
+    <p>back to event</p>
+  <% end%>
+</div>
+
 <div id="chat">
   <div id="messages" data-event-id="<%= @event.id %>">
     <% @event.messages.each do |message| %>

@@ -48,7 +48,7 @@
     background-color: #50adb9;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     border-radius: 2px;
-    height: 65px
+    height: 35px
 
   }
 
@@ -88,10 +88,18 @@
 
   .has-events {
     background-color: #E5EDEB;
+
+    i {
+      display: none;
+    }
   }
 
   .has-events:hover,
   .has-events:active {
     height: 100px;
+
+    i {
+      display: block;
+    }
   }
 }
