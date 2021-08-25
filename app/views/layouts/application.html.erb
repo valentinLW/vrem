@@ -16,10 +16,11 @@
 
     <%= render 'shared/header' %>
     <main>
-      <div><span></span></div>
+      <div>
+        <%= yield %>
+      </div>
     </main>
 
-    <%= yield %>
 
     <%= render 'shared/footer' %>
   </body>
