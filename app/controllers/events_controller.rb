@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   def index
     start_date = params.fetch(:start_time, Date.today).to_date
     @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @invitations = Invitation.where(user: current_user).where(status: :pending)
   end
 
   def show
@@ -19,7 +20,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
 
-    if @event.save!
+    if @event.save
       redirect_to event_path(@event)
     else
       render :new
