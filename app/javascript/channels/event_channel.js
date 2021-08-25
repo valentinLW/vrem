@@ -7,6 +7,7 @@ const initEventCable = () => {
 
     consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
       received(data) {
+        console.log(data)
         messagesContainer.insertAdjacentHTML('beforeend', data);
       },
     });
