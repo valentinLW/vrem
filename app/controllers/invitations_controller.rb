@@ -1,8 +1,8 @@
 class InvitationsController < ApplicationController
   def index
-    @users = User.all
-    @invitations = Invitation.all
     @event = Event.find(params[:event_id])
+    @invitations = Invitation.where(event: @event)
+    @users = User.joins("LEFT JOIN invitations ON invitations.user_id = users.id").where("invitations.id IS NULL")
     @invitation = Invitation.new
   end
 
@@ -12,5 +12,4 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(event: @event, user:@user)
     @invitation.save!
   end
-
 end
