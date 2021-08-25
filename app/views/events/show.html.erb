@@ -1,6 +1,8 @@
-<%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
-<% end %>
-<%= link_to(reject_path(@invitation), method: :patch, :class => 'btn btn-danger') do %>
+<% if @invitation %>
+  <%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
+  <% end %>
+  <%= link_to(reject_path(@invitation), method: :patch, :class => 'btn btn-danger') do %>
+  <% end %>
 <% end %>
 
 <div id="chat">

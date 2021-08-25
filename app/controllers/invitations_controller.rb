@@ -1,6 +1,6 @@
 class InvitationsController < ApplicationController
-  before_action :event_by_event_id, only: %i[index create]
-  before_action :event_by_id_and_invitation, only: %i[accept reject]
+  before_action :set_event, only: %i[index create]
+  before_action :set_invitation, only: %i[accept reject]
 
   def index
     @invitations = Invitation.where(event: @event)
@@ -9,8 +9,8 @@ class InvitationsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:event_id])
-    @invitation = Invitation.new(event: @event, user:@user)
+    @user = User.find(params[:user_id])
+    @invitation = Invitation.new(event: @event, user: @user)
     @invitation.save!
   end
 
@@ -24,12 +24,11 @@ class InvitationsController < ApplicationController
 
   private
 
-  def event_by_id_and_invitation
-    @event = Event.find(params[:id])
-    @invitation = Invitation.where(event: @event).where(user: current_user).first
+  def set_invitation
+    @invitation = Invitation.find(params[:id])
   end
 
-  def event_by_event_id
+  def set_event
     @event = Event.find(params[:event_id])
   end
 end
