@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
-    #@events = Event.where(current_user.invitation_token?)
+    start_date = params.fetch(:start_time, Date.today).to_date
+    @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 
   def show
