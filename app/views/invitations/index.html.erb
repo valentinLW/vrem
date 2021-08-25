@@ -1,29 +1,12 @@
-<!--
-<% @users.each do |user|  %>
+<% @not_guests.each do |user|  %>
   <%= link_to(event_invite_path(@event, user), method: :post, class: 'btn btn-success') do %>
     <p>Invite <%= user.nickname %></p>
   <% end %>
 <% end %>
--->
 
 <% @invitations.each do |invitation| %>
 <div class="btn btn-primary">
   <%= invitation.user.nickname %>
   <%= invitation.status %>
 </div>
-<% end %>
-
-<h2>Not invited Users</h2>
-<% @users.each do |u| %>
-  <%= u.nickname %>
-<% end %>
-
-<h2>All Users</h2>
-<% @allusers.each do |u| %>
-  <%= u.nickname %>
-<% end %>
-
-<h2>Invited Users</h2>
-<% @invitations.each do |i| %>
-  <%= i.user.nickname %>
 <% end %>

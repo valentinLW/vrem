@@ -4,9 +4,9 @@ class InvitationsController < ApplicationController
 
   def index
     @invitations = Invitation.where(event: @event)
-    @users = User.joins("LEFT JOIN invitations ON invitations.user_id = users.id").where("invitations.id IS NULL")
-    @allusers = User.all
     @invitation = Invitation.new
+    @not_guests = User.where.not(id: @event.invitations.pluck(:user_id))
+    raise
   end
 
   def create
