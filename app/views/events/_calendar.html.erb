@@ -1,4 +1,3 @@
-<br>
 <%= month_calendar(events: @events, attribute: :start_time, end_attribute: :end_date) do |date, events| %>
   <%= date.day %>
   <% events.each do |event| %>
