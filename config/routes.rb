@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :events, only: %i[new create index show edit update] do
-    resources :messages, only: :create
+    resources :messages, only: %i[create]
     resources :invitations, only: %i[create index]
+    get "messages", to: 'messages#show', as: :chat
     post "invite/:user_id", to: 'invitations#create', as: :invite
   end
 
