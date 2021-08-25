@@ -1,0 +1,14 @@
+<% @not_guests.each do |user|  %>
+  <% if user != current_user %>
+    <%= link_to(event_invite_path(@event, user), method: :post, class: 'btn btn-success') do %>
+      <p>Invite <%= user.nickname %></p>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% @invitations.each do |invitation| %>
+<div class="btn btn-primary">
+  <%= invitation.user.nickname %>
+  <%= invitation.status %>
+</div>
+<% end %>

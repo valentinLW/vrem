@@ -2,10 +2,11 @@ body {
   background-color: #fff;
   background: asset-url('bg.png');
   background-repeat: repeat-y;
+  font-family: 'Jost', sans-serif;
 }
 
 @media screen and (max-width: 400px) {
-  main>div {
+  body>div {
     width: 75%;
   }
 

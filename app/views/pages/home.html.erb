@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Vremennyy</h1>
+  <p>Plan events</p>
+  <p>Chat with the assistants</p>
+  <p>Upload photos</p>
+  <p>Self-delete chat after event.</p>
+  <br>
+  <br>
+  <br>
+  <div class="flexbox">
+    <div class="links">
+      <%= link_to((user_session_path), method: :get, :class => 'btn btn-primary') do %>
+        <p>Login</p>
+      <% end%>
+    </div>
+    <div class="links">
+      <%= link_to((new_user_registration_path), method: :get, :class => 'btn btn-info') do %>
+        <p>Sign UP</p>
+      <% end%>
+    </div>
+  </div>
+</div>
