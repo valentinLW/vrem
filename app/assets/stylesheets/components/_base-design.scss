@@ -1,19 +1,12 @@
 body {
-    background-color: #fff;
-    font-family: 'Jost', sans-serif;
-}
-main > div {
-    position: absolute;
-    background: asset-url('bg.png');
-    background-repeat: repeat-y;
-    width: 75%;
-    height: 100%;
-    margin-top: 10%;
-    opacity: 75%;
+  background-color: #fff;
+  background: asset-url('bg.png');
+  background-repeat: repeat-y;
+  font-family: 'Jost', sans-serif;
 }
 
 @media screen and (max-width: 400px) {
-  main>div {
+  body>div {
     width: 75%;
   }
 
