@@ -1,15 +1,16 @@
 class InvitationsController < ApplicationController
   def index
     @users = User.all
+    @invitations = Invitation.all
+    @event = Event.find(params[:event_id])
+    @invitation = Invitation.new
   end
 
   def create
-    @invitation = Invitation.new(invitation_params)
+    @event = Event.find(params[:event_id])
+    @user = User.find(params[:event_id])
+    @invitation = Invitation.new(event: @event, user:@user)
+    @invitation.save!
   end
 
-  private
-
-  def invitation_params
-    params.require(:invitation).permit(:user_id)
-  end
 end

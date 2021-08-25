@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :events, only: %i[new create index show edit update] do
     resources :messages, only: :create
     resources :invitations, only: %i[create index]
+    post "invite/:user_id", to: 'invitations#create', as: :invite
   end
 
 end
