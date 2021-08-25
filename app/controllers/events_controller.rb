@@ -8,6 +8,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @message = Message.new
+    @invitation = Invitation.where(user: current_user).where(event: @event).first
   end
 
   def new

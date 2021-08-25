@@ -1,3 +1,8 @@
+<%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
+<% end %>
+<%= link_to(reject_path(@invitation), method: :patch, :class => 'btn btn-danger') do %>
+<% end %>
+
 <div id="chat">
   <div id="messages" data-event-id="<%= @event.id %>">
     <% @event.messages.each do |message| %>
