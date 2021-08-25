@@ -1,14 +1,7 @@
 body {
-    background-color: #fff;
-}
-main > div {
-    position: absolute;
-    background: asset-url('bg.png');
-    background-repeat: repeat-y;
-    width: 75%;
-    height: 100%;
-    margin-top: 10%;
-    opacity: 75%;
+  background-color: #fff;
+  background: asset-url('bg.png');
+  background-repeat: repeat-y;
 }
 
 @media screen and (max-width: 400px) {
