@@ -1,4 +1,11 @@
- <%= render "show_container", event:@event %>
+<%= render "show_container", event:@event %>
+
+<% if @event.user_id == current_user.id %>
+  <%= link_to(event_invitations_path(@event), method: :get, :class => 'btn btn-success') do %>
+    <p>Add People</p>
+  <% end %>
+<% end %>
+
 
 <% if @invitation && @invitation.status == "pending" %>
   <%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
@@ -8,6 +15,7 @@
     <p>Reject</p>
   <% end %>
 <% end %>
+
 <% if @event.end_time > Date.today %>
     <div class="container col-6">
       <div class="links">
