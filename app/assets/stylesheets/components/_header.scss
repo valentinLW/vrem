@@ -1,5 +1,6 @@
 .header {
   background: asset-url('header.jpg');
+  position: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,6 +8,7 @@
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 100;
 }
 
 .header a img {

@@ -13,7 +13,6 @@ const initMapbox = () => {
       center: [ marker.lng, marker.lat ],
       zoom: 13
     });
-    console.log(marker)
      new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
