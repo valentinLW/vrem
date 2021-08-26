@@ -6,8 +6,9 @@
 
 <div id="chat">
   <div id="messages" data-event-id="<%= @event.id %>" data-current-user-id="<%= current_user.id %>">
-    <% @event.messages.each do |message| %>
-      <%= render "messages/message", message:message %>
+    <% @event.messages.each_with_index do |message, index| %>
+    <% hide_author = @event.messages[index + 1] && @event.messages[index + 1].user == message.user %>
+      <%= render "messages/message", message:message, hide_author: hide_author %>
     <% end %>
   </div>
   <div class="chat-input">
