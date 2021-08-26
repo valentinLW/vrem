@@ -2,6 +2,6 @@
 <div class="message-container" id="message-<%= message.id %>" data-user-id="<%= message.user.id %>">
   <p class="<%= message.user == current_user ? 'me' : 'others' %>"><%= message.content %></p>
   <% if !hide_author %>
-    <%= render "author", message: message %>
+    <i class="nickname <%= message.user == current_user ? 'me' : 'others' %>"><%= message.user.nickname %></i>
   <% end %>
 </div>
