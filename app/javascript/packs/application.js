@@ -28,8 +28,15 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initEventCable } from '../channels/event_channel';
+import { initMapbox } from './init_mapbox';
+import { datepickr } from './init_flatpickr';
+import { initAutocomplete } from './init_places';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initEventCable();
+  initMapbox();
+  datepickr();
+  initAutocomplete();
 });

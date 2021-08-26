@@ -8,6 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "simple_calendar";
+@import "flatpickr/dist/flatpickr";
 
 // Your CSS partials
 @import "components/index";
@@ -19,4 +20,5 @@
 @import "components/chat";
 @import "components/upcoming";
 @import "components/newform";
-@import "components/show"
+@import "components/show";
+@import "components/button";
