@@ -1,10 +1,15 @@
-<%= month_calendar(events: @events, attribute: :start_time, end_attribute: :end_date) do |date, events| %>
-  <%= date.day %>
-  <% events.each do |event| %>
-    <%= link_to event_path(event), class: "text-decoration-none" do %>
-    <div>
-      <i class="fas fa-users" style="color:transparent"></i>
-    </div>
+<div class="container">
+  <br>
+  <h2 class="swiper-header">Calendar</h2>
+  <br>
+  <%= month_calendar(events: @events, attribute: :start_time, end_attribute: :end_date) do |date, events| %>
+    <%= date.day %>
+    <% events.each do |event| %>
+      <%= link_to event_path(event), class: "text-decoration-none" do %>
+      <div>
+        <i class="fas fa-users" style="color:transparent"></i>
+      </div>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
+</div>
