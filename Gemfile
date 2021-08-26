@@ -27,6 +27,7 @@ gem "simple_calendar", "~> 2.4"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'geocoder'
 
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
