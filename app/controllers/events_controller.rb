@@ -14,6 +14,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @disable_header = @disable_footer = true
   end
 
   def create
