@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :disable_footer_header, only: %i[new edit]
 
   def index
     start_date = params.fetch(:start_time, Date.today).to_date
@@ -14,7 +15,6 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @disable_header = @disable_footer = true
   end
 
   def create
@@ -47,5 +47,9 @@ class EventsController < ApplicationController
       :start_time,
       :end_time
     )
+  end
+
+  def disable_footer_header
+    @disable_header = @disable_footer = true
   end
 end
