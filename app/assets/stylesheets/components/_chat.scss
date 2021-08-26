@@ -9,16 +9,13 @@
   height: 80vh;
   position: relative;
   overflow: scroll;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .chat-input {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  form {
-    width: 100%;
-    padding-top: 2rem;
-  }
+  width: 100%;
 
   input {
     border-radius: 1.15rem;
