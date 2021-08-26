@@ -5,12 +5,18 @@ class EventsController < ApplicationController
     start_date = params.fetch(:start_time, Date.today).to_date
     @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
     @invitations = Invitation.where(user: current_user).where(status: :pending)
+
   end
 
   def show
     @event = Event.find(params[:id])
     @message = Message.new
     @invitation = Invitation.where(user: current_user).where(event: @event).first
+    @markers =
+      {
+        lat: @event.latitude,
+        lng: @event.longitude
+      }
   end
 
   def new
