@@ -13,9 +13,9 @@
 }
 
 .chat-input {
+  position: absolute;
+  bottom: 0;
   form {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding-top: 2rem;
   }
