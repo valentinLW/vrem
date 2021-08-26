@@ -1,0 +1,11 @@
+<div class="event-media">
+  <% 5.times do |index| %>
+    <% if index.even? %>
+      <div class="event-media-column">
+    <% end %>
+      <img src="<%= "https://source.unsplash.com/random?sig=#{index}" %>" alt="" class="event-media-image">
+    <% if index.odd? %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

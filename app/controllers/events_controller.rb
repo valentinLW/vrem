@@ -10,13 +10,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    render :past_show if @event.end_time < Date.today
     @message = Message.new
     @invitation = Invitation.where(user: current_user).where(event: @event).first
-    @markers =
-      {
-        lat: @event.latitude,
-        lng: @event.longitude
-      }
+    @markers = { lat: @event.latitude, lng: @event.longitude }
   end
 
   def new

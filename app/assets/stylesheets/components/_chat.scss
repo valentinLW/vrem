@@ -75,7 +75,7 @@
   align-items: center;
   top: 0;
   width: 100vw;
-  background-color: $aubergine;
+  background: asset-url('header.jpeg');
   padding: 0.5rem 0rem;
 }
 
@@ -87,7 +87,7 @@
     text-align: center;
     width: 100%;
     margin-bottom: 0;
-    color: $ice;
+    color: $aubergine;
     font-size: 1.8rem;
   }
 
@@ -96,7 +96,7 @@
     margin: 0 0.5rem;
   }
   a {
-    color: $ice;
+    color: $aubergine;
   }
 
   .empty-char {
