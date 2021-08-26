@@ -11,13 +11,18 @@
     <% end%>
   </div>
   <div class="swiper-wrapper">
-    <div class="swiper-slide">'
+    <div class="swiper-slide">
       <%= render "upcoming", events:@events %>
     </div>
     <div class="swiper-slide">
-      <% @invitations.each do |invitation| %>
-        <%= render "invited", invitation:invitation %>
-      <% end %>
+      <div class="container">
+        <br>
+        <h2 class="swiper-header">Your invitations</h2>
+        <br>
+        <% @invitations.each do |invitation| %>
+          <%= render "invited", invitation:invitation %>
+        <% end %>
+      </div>
     </div>
     <div class="swiper-slide">
       <%= render 'calendar' %>
