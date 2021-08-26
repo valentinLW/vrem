@@ -24,8 +24,11 @@
     <%= render 'shared/header' unless @disable_header %>
     <%= yield %>
     <%= render 'shared/footer' unless @disable_footer %>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-   <script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js">
+    </script>
+
+    <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 0,
