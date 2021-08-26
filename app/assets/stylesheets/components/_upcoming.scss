@@ -1,3 +1,11 @@
+.container {
+  padding: 0px 35px !important;
+}
+
+.col-6 {
+  max-width: 100%;
+}
+
 .upcontainer {
   display: flex;
   flex-direction: column;
@@ -40,7 +48,7 @@
   margin: 10px;
   text-align: center;
   color: #673c4f;
-  font-family: Jost;
+  font-family: $body-font;
 }
 
 h2 {
