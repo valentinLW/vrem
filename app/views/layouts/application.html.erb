@@ -9,10 +9,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
     <%= stylesheet_pack_tag 'application' %>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
 
     <%= render 'application/favicon' %>
 
@@ -21,14 +19,16 @@
   <body>
     <%= render 'shared/flashes' %>
 
-    <%= render 'shared/header' unless @disable_header %>
-    <%= yield %>
-    <%= render 'shared/footer' unless @disable_footer %>
+    <%= render 'shared/header' %>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js">
-    </script>
+    <div class="main">
 
-    <script>
+      <%= yield %>
+
+    </div>
+    <%= render 'shared/footer' %>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 0,
