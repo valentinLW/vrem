@@ -9,14 +9,13 @@
   height: 80vh;
   position: relative;
   overflow: scroll;
+  padding-bottom: 3rem;
 }
 
 .chat-input {
-  form {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
   input {
     border-radius: 1.15rem;
@@ -37,22 +36,23 @@
 .message-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .message-container {
-  .me {
+  .my-message {
     margin-left: auto;
   }
-  p.me {
+  p.my-message {
     margin-left: auto;
     background-color: $aubergine;
     color: #fff;
   }
 
-  .others {
+  .others-message {
     margin-right: auto;
   }
-  p.others {
+  p.others-message {
     background-color: #004837;
     opacity: 40%;
     color: white;
@@ -63,8 +63,38 @@
   .nickname {
     font-size: 70%;
     display: block;
-    margin-bottom: 0.5rem;
     padding: 0 0.5rem;
     font-style: normal;
+  }
+}
+
+.chat-header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: $aubergine;
+  padding: 0.5rem 1rem;
+}
+
+.chat-header {
+  display: flex;
+  h2 {
+    display: inline;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    color: $ice;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+  a {
+    color: $ice;
+  }
+
+  .empty-char {
+    width: 1rem;
   }
 }
