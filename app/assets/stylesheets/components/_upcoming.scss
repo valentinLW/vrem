@@ -21,6 +21,15 @@
   margin-bottom: 20px;
 }
 
+.mapcards {
+  display: flex;
+  flex-direction: column;
+  background: #00000015;
+  border: 0.5px solid rgba(128, 128, 128, 0.505);
+  height: 150px;
+  padding: 0px;
+}
+
 .img {
   height: 85px;
   margin: 10px;
