@@ -19,8 +19,12 @@
         <br>
         <h2 class="swiper-header">Your invitations</h2>
         <br>
+        <% if @invitations.any? %>
         <% @invitations.each do |invitation| %>
           <%= render "invited", invitation:invitation %>
+          <% end %>
+          <% else %>
+        <h2 class="swiper-no-invites">Currently you have 0 pending invitations</h2>
         <% end %>
       </div>
     </div>

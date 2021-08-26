@@ -2,12 +2,20 @@
   <%= link_to((event_path(@event)), :class => 'btn-boton') do %>
     back to event
   <% end%>
+
+<div class="chat-header">
+    <%= link_to((event_path(@event))) do %>
+      <i class="fas fa-angle-left"></i>
+    <% end%>
+      <h2><%= @event.name %></h2>
+      <div class="empty-char"></div>
 </div>
 
 <div id="chat">
-  <div id="messages" data-event-id="<%= @event.id %>">
-    <% @event.messages.each do |message| %>
-      <%= render "messages/message", message:message %>
+  <div id="messages" data-event-id="<%= @event.id %>" data-current-user-id="<%= current_user.id %>">
+    <% @event.messages.each_with_index do |message, index| %>
+    <% hide_author = @event.messages[index + 1] && @event.messages[index + 1].user == message.user %>
+      <%= render "messages/message", message:message, hide_author: hide_author %>
     <% end %>
   </div>
   <div class="chat-input">
@@ -16,3 +24,4 @@
     <% end %>
   </div>
 </div>
+<script>document.getElementById("messages").lastElementChild.scrollIntoView();</script>
