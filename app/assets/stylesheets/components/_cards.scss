@@ -1,0 +1,66 @@
+.event-card {
+  background-color: $ice;
+  border-radius: 0.5rem;
+  border: 1px solid $aubergine;
+  margin-bottom: 1rem;
+}
+
+.event-date {
+  text-align: right;
+  color: #673c4f;
+  margin-bottom: 0;
+  padding-right: 1rem;
+ }
+
+ .event-host {
+  text-align: left;
+  color: #673c4f;
+  margin-bottom: 0;
+  padding-left: 1rem;
+ }
+
+.event-img {
+  height: 120px;
+  background-size: cover;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.event-details {
+  padding: 1rem 0;
+}
+
+.event-info {
+  i {
+    padding-left: 1rem;
+    margin-right: 2rem;
+    width: 1rem;
+  }
+  display: flex;
+}
+
+.event-buttons {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-button {
+  padding: 0.5rem 1.5rem;
+  background-color: $paradiso;
+  text-decoration: none;
+  color: $ice;
+  border-radius: 0.5rem;
+}
+
+#map {
+  height: 200px !important;
+}

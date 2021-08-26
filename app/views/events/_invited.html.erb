@@ -1,16 +1,24 @@
-<div class="container" style="flex-direction:column">
-  <% if invitation && invitation.status == "pending" %>
-    <div class="eventcards">
-      <%= link_to event_path(invitation.event) do %>
-        <div class="img"><img src="" alt="Picture Place"></div>
-        <div class="name"><h2><%= invitation.event.name %></h2></div>
+<div class="">
+  <div class="swiper-header">
+     <i class="fas fa-angle-double-left"></i>
+     <h2>
+       Your invitations
+     </h2>
+     <i class="fas fa-angle-double-right"></i>
+  </div>
+  <% invitations.each do |invitation| %>
+    <% event = invitation.event %>
+    <% if event.start_time > Date.today %>
+
+      <%= link_to event_path(event) do %>
+        <div class="event-card">
+          <p class="event-date"><%= event.start_time.strftime("%d.%m.%Y") %></p>
+          <div class="event-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/)" style="background-image: url(https://source.unsplash.com/random/), linear-gradient(#eb01a5, #d13531);">
+            <h2><%= event.name %></h2>
+          </div>
+          <p class="event-host"><%= event.user.nickname %></p>
+        </div>
       <% end %>
-      <%= link_to(accept_path(invitation), method: :patch,remote: true, :class => 'btn-boton') do %>
-        <p>Accept</p>
-      <% end %>
-      <%= link_to(reject_path(invitation), method: :patch,remote: true, :class => 'btn-boton') do %>
-        <p>Reject</p>
-      <% end %>
-    </div>
+    <% end %>
   <% end %>
 </div>

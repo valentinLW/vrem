@@ -1,7 +1,11 @@
-<div class="container">
-  <br>
-  <h2 class="swiper-header">Calendar</h2>
-  <br>
+<div class="">
+  <div class="swiper-header">
+    <i class="fas fa-angle-double-left"></i>
+    <h2>
+      Calendar
+    </h2>
+    <i class="fas fa-angle-double-right"></i>
+  </div>
   <%= month_calendar(events: @events, attribute: :start_time, end_attribute: :end_date) do |date, events| %>
     <%= date.day %>
     <% events.each do |event| %>

@@ -18,17 +18,8 @@
 
   <body>
     <%= render 'shared/flashes' %>
-
-    <%= render 'shared/header' unless @disable_header %>
-
-    <br>
-    <br>
-    <div class="main">
-
-      <%= yield %>
-
-    </div>
-    <%= render 'shared/footer'unless @disable_footer%>
+    <%= render 'shared/header' %>
+    <%= yield %>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
    <script>
       var swiper = new Swiper(".mySwiper", {

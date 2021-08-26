@@ -7,10 +7,10 @@
 }
 
 .upcontainer {
+  width: 95vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 20px;
   height: 190px;
   background: transparent;
 }
@@ -18,14 +18,15 @@
 .date {
   text-align: right;
   color: #673c4f;
+  margin-bottom: 0;
  }
 
 .eventcards {
   display: flex;
   flex-direction: column;
-  background: #00000015;
+  background-color: $ice;
   border: 0.5px solid rgba(128, 128, 128, 0.505);
-  height: 150px;
+  border-radius: 0.5rem;
   margin-bottom: 20px;
 }
 
@@ -39,9 +40,8 @@
 }
 
 .img {
-  height: 85px;
+  height: 120px;
   margin: 10px;
-  border: 0.2px dotted rgba(128, 128, 128, 0.505);
 }
 
 .name {
