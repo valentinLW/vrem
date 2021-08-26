@@ -1,14 +1,12 @@
 body {
-  background-color: #fff;
+  background-color: rgb(139, 53, 53);
   background: asset-url('bg.png');
+  background-size: 100%;
+  background-position-y: 150px;
   background-repeat: repeat-y;
 }
 
 @media screen and (max-width: 400px) {
-  body>div {
-    width: 75%;
-  }
-
   div.header {
     height: 40px;
   }
