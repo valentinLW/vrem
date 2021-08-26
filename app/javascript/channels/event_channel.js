@@ -23,6 +23,7 @@ const initEventCable = () => {
         }
 
         messagesContainer.insertAdjacentHTML('beforeend', data);
+        messagesContainer.lastElementChild.scrollIntoView();
       },
     });
   }

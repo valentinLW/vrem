@@ -17,6 +17,7 @@ class MessagesController < ApplicationController
   def show
     @event = Event.find(params[:event_id])
     @message = Message.new
+    @disable_footer = true
   end
 
 

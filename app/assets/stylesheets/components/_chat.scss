@@ -9,6 +9,7 @@
   height: 80vh;
   position: relative;
   overflow: scroll;
+  padding-bottom: 2rem;
 }
 
 .chat-input {
@@ -16,6 +17,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-top: 2rem;
   }
 
   input {
