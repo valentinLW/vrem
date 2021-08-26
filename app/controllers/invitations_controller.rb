@@ -12,14 +12,17 @@ class InvitationsController < ApplicationController
     @user = User.find(params[:user_id])
     @invitation = Invitation.new(event: @event, user: @user)
     @invitation.save
+    redirect_to event_invitations_path(@event)
   end
 
   def accept
     @invitation.accepted!
+    redirect_to event_path
   end
 
   def reject
     @invitation.rejected!
+    redirect_to events_path
   end
 
   private
