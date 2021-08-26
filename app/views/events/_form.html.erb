@@ -10,7 +10,7 @@
   <%= f.input :name %>
   <%= f.input :start_time, as: :string, input_html: {class: "datepicker"} %>
   <%= f.input :end_time, as: :string, input_html: {class: "datepicker"} %>
-  <%= f.input :location, input_html: {id: "flat_address"} %>
+  <%= f.input :location, required: true, input_html: {id: "flat_address"} %>
   <%= f.input :description %>
-  <%= f.submit class: "btn create-btn" %>
+  <%= f.submit class: "vale-buton" %>
 <% end %>
