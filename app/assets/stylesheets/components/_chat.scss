@@ -39,6 +39,7 @@
 .message-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .message-container {
@@ -65,7 +66,6 @@
   .nickname {
     font-size: 70%;
     display: block;
-    margin-bottom: 0.5rem;
     padding: 0 0.5rem;
     font-style: normal;
   }
