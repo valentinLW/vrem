@@ -5,10 +5,10 @@
         <div class="img"><img src="" alt="Picture Place"></div>
         <div class="name"><h2><%= invitation.event.name %></h2></div>
       <% end %>
-      <%= link_to(accept_path(invitation), method: :patch, :class => 'btn btn-success') do %>
+      <%= link_to(accept_path(invitation), method: :patch, :class => 'btn-boton') do %>
         <p>Accept</p>
       <% end %>
-      <%= link_to(reject_path(invitation), method: :patch, :class => 'btn btn-danger') do %>
+      <%= link_to(reject_path(invitation), method: :patch, :class => 'btn-boton') do %>
         <p>Reject</p>
       <% end %>
     </div>
