@@ -1,18 +1,16 @@
-<div class="block">
-  <% events.each do |event|%>
-    <% if event.start_time > Date.today %>
-      <div class="container col-6">
-        <div class="date">
-          <%= event.start_time.strftime("%d.%m.%Y") %>
-        </div>
-
-        <div class="eventcards">
-          <%= link_to event_path(event) do %>
-            <div class="img"><img src="" alt="Picture Place"></div>
-            <div class="name"><h2><%= event.name %></h2></div>
-          <% end %>
-        </div>
+<% events.each do |event|%>
+  <% if event.start_time > Date.today %>
+    <div class="upcontainer col-6">
+      <div class="date">
+        <%= event.start_time.strftime("%d.%m.%Y") %>
       </div>
-    <% end %>
+
+      <div class="eventcards">
+        <%= link_to event_path(event) do %>
+          <div class="img"><img src="" alt="Picture Place"></div>
+          <div class="name"><h2><%= event.name %></h2></div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</div>
+<% end %>
