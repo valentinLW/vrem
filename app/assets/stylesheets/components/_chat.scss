@@ -67,3 +67,34 @@
     font-style: normal;
   }
 }
+
+.chat-header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: $aubergine;
+  padding: 0.5rem 1rem;
+}
+
+.chat-header {
+  display: flex;
+  h2 {
+    display: inline;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+    color: $ice;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+  a {
+    color: $ice;
+  }
+
+  .empty-char {
+    width: 1rem;
+  }
+}

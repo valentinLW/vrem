@@ -1,7 +1,9 @@
-<div class="links">
-  <%= link_to((event_path(@event)), :class => 'btn btn-info') do %>
-    <p>back to event</p>
-  <% end%>
+<div class="chat-header">
+    <%= link_to((event_path(@event))) do %>
+      <i class="fas fa-angle-left"></i>
+    <% end%>
+      <h2><%= @event.name %></h2>
+      <div class="empty-char"></div>
 </div>
 
 <div id="chat">
