@@ -11,7 +11,7 @@ class InvitationsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @invitation = Invitation.new(event: @event, user: @user)
-    @invitation.save!
+    @invitation.save
   end
 
   def accept

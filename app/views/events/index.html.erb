@@ -5,15 +5,22 @@
       <p>Logout</p>
     <% end%>
   </div>
+  <div class="links">
+    <%= link_to((new_event_path), method: :get, :class => 'btn btn-primary') do %>
+      <p>Create new event</p>
+    <% end%>
+  </div>
   <div class="swiper-wrapper">
     <div class="swiper-slide">'
       <%= render "upcoming", events:@events %>
     </div>
     <div class="swiper-slide">
-      Invitations
+      <% @invitations.each do |invitation| %>
+        <%= render "invited", invitation:invitation %>
+      <% end %>
     </div>
     <div class="swiper-slide">
-      <%= render 'events/calendar' %>
+      <%= render 'calendar' %>
     </div>
   </div>
   <div class="swiper-pagination"></div>
