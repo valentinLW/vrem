@@ -1,17 +1,17 @@
 <%= render "show_container", event:@event %>
 
 <% if @event.user_id == current_user.id %>
-  <%= link_to(event_invitations_path(@event), method: :get, :class => 'btn btn-success') do %>
+  <%= link_to(event_invitations_path(@event), method: :get, :class => 'btn-boton') do %>
     <p>Add People</p>
   <% end %>
 <% end %>
 
 
 <% if @invitation && @invitation.status == "pending" %>
-  <%= link_to(accept_path(@invitation), method: :patch, :class => 'btn btn-success') do %>
+  <%= link_to(accept_path(@invitation), method: :patch, :class => 'btn-boton') do %>
     <p>Accept</p>
   <% end %>
-  <%= link_to(reject_path(@invitation), method: :patch, :class => 'btn btn-danger') do %>
+  <%= link_to(reject_path(@invitation), method: :patch, :class => 'btn-boton') do %>
     <p>Reject</p>
   <% end %>
 <% end %>
@@ -19,15 +19,15 @@
 <% if @event.end_time > Date.today %>
     <div>
       <div class="links">
-        <%= link_to((event_chat_path(@event)), :class => 'btn btn-danger') do %>
+        <%= link_to((event_chat_path(@event)), :class => 'btn-boton') do %>
           <p>CHAT</p>
         <% end%>
     </div>
 <% else %>
     <div>
       <div class="links">
-        <%= link_to((event_chat_path(@event)), :class => 'btn btn-success') do %>
-          <p>MEDIA</p>
+        <%= link_to((event_chat_path(@event)), :class => 'btn-boton') do %>
+          MEDIA
         <% end%>
       </div>
 <% end %>
@@ -35,14 +35,14 @@
 <% if @event.start_time < Date.today %>
     <div>
       <div class="links">
-        <%= link_to((event_chat_path(@event)), :class => 'btn btn-danger') do %>
-          <p>Upload Photos</p>
+        <%= link_to((event_chat_path(@event)), :class => 'btn-boton') do %>
+          Upload Photos
         <% end%>
     </div>
 <% end %>
 
 <div class="links">
-  <%= link_to(events_path, :class => 'btn btn-primary') do %>
-    <p>Dashboard</p>
+  <%= link_to(events_path, :class => 'btn-boton') do %>
+    Dashboard
   <% end%>
 </div>
