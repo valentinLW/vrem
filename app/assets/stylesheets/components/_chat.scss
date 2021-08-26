@@ -40,19 +40,19 @@
 }
 
 .message-container {
-  .me {
+  .my-message {
     margin-left: auto;
   }
-  p.me {
+  p.my-message {
     margin-left: auto;
     background-color: $aubergine;
     color: #fff;
   }
 
-  .others {
+  .others-message {
     margin-right: auto;
   }
-  p.others {
+  p.others-message {
     background-color: #004837;
     opacity: 40%;
     color: white;
