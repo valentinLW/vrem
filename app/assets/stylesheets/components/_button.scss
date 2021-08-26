@@ -1,0 +1,51 @@
+// .boton {
+//   border: 0.5px solid rgba(105, 105, 105, 0.156);
+//   box-shadow: rgba(0, 0, 0, 0.238);
+// }
+
+.btn-boton {
+	min-width: 40px;
+	position: relative;
+	display: inline-block;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	padding: 5px;
+
+  font-family: Jost;
+	font-size: 75%;
+	font-weight: 600;
+
+	color: $aubergine;
+  background-color: $ice;
+
+	transition: 0.5s;
+}
+
+
+.btn-boton:before {
+	position: absolute;
+	content:"";
+	border-top: 5px solid lighten($ice, 5%);
+	border-left: 5px solid lighten($ice, 5%);
+	border-right: 5px solid darken($ice, 5%);
+	border-bottom: 5px solid darken($ice, 5%);
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  transition: 0.5s;
+
+}
+
+.btn-boton:hover {
+	box-shadow: 3px 3px darken($lightaubergine, 5%), -3px -3px lighten($lightaubergine, 10%);
+  color: $darkgreyish;
+	cursor: pointer;
+		&::before {
+		border: 0px ;
+	}
+}
