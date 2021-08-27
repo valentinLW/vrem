@@ -17,7 +17,7 @@ class InvitationsController < ApplicationController
 
   def accept
     @invitation.accepted!
-    redirect_to event_path
+    redirect_to event_path(@invitation.event)
   end
 
   def reject
