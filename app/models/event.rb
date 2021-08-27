@@ -8,6 +8,7 @@ class Event < ApplicationRecord
   validates :name, presence: true, length: { minimum: 5, maximum: 30 }
   validates :start_time, presence: true
   validates :end_time, presence: true
+  validates :image, presence: true
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
