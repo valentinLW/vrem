@@ -13,7 +13,6 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     if @event.end_time < Date.today
       @images = %w[
-        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068087/IMG_9805_dwsg7s.jpg
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9796_cz8acp.jpg
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9806_p3gvti.jpg
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9797_hb2d3n.jpg
@@ -29,6 +28,7 @@ class EventsController < ApplicationController
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9791_zv0nox.jpg
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9798_vtd5gs.jpg
         https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9808_tlfar4.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630071585/IMG_9788_e24chh.png
         ]
       render :past_show
     end
