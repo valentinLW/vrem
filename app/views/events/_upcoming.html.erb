@@ -1,10 +1,8 @@
-<div class="">
+<div>
   <div class="swiper-header">
-     <i class="fas fa-angle-double-left"></i>
-     <h2>
-       Your upcoming Events
-     </h2>
-     <i class="fas fa-angle-double-right"></i>
+      <i class="fas fa-angle-double-left"></i>
+      <h2><%= title %></h2>
+      <i class="fas fa-angle-double-right"></i>
   </div>
   <% events.each do |event|%>
     <% if event.start_time > Date.today %>
