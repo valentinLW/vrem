@@ -7,6 +7,7 @@ header {
   width: 100vw;
   background: asset-url('header.jpeg');
   padding: 0.5rem 0rem;
+  z-index: 100;
 
   h2 {
     font-family: $logo-font;
