@@ -1,3 +1,5 @@
+<div class="invite">
+
 <% @not_guests.each do |user|  %>
   <% if user != current_user %>
     <%= link_to(event_invite_path(@event, user), method: :post, remote: true, class: 'btn btn-success') do %>
@@ -9,6 +11,8 @@
 <% @invitations.each do |invitation| %>
 <div class="btn btn-primary">
   <%= invitation.user.nickname %>
-  <%= invitation.status %>
 </div>
+<%= invitation.status %>
 <% end %>
+
+</div>
