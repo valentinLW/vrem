@@ -1,0 +1,90 @@
+.carousel-background {
+    background-image: url("/assets/headercommentedout.jpg");
+    margin-top: -30px;
+}
+
+.container-carousel {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.carouselimg {
+  border-radius: 2px;
+  border: 1px solid #949494;
+  opacity: 0.9;
+}
+
+// #carousel-example-1z {
+//   width: 60%;
+//   padding: 50px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+.carousel-inner {
+  box-shadow: 0px 0px 30px 0px #949494;
+}
+
+.banner {
+  text-align: right;
+  position: absolute;
+  top: 16%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, serif;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.banner2 {
+  text-align: justify;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  font-family: Verdana, Geneva, Tahoma, serif;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.banner3 {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, serif;
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+  opacity: 0.8;
+}
+
+.banner4 {
+  text-align: left;
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, serif;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  opacity: 0.9;
+}
+
+.banner-home {
+  font-family: Verdana,
+    Geneva,
+    Tahoma,
+    sans-serif;
+  color: #470D69;
+  font-weight: 800;
+  font-size: 35px;
+  opacity: 0.8;
+}

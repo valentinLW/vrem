@@ -7,6 +7,17 @@
   }
 }
 
+.flexbox-home {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 48px;
+
+  .links {
+    display: block
+  }
+}
+
 .block {
   display: block;
   overflow: scroll;
