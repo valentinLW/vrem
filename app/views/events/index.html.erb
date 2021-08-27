@@ -2,10 +2,10 @@
  <div class="swiper mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <%= render "upcoming", events:@events %>
+      <%= render "upcoming", events:@events, title: "Upcoming Events" %>
     </div>
     <div class="swiper-slide">
-      <%= render "invited", invitations:@invitations %>
+      <%= render "upcoming", events:@invitations.map{ |i| i.event }, title: "Your Invitations" %>
     </div>
     <div class="swiper-slide">
       <%= render 'calendar' %>

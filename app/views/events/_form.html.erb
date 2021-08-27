@@ -1,16 +1,8 @@
-<div class="chat-header">
-    <%= link_to(events_path) do %>
-      <i class="fas fa-angle-left"></i>
-    <% end%>
-      <h2><%= title %></h2>
-      <div class="empty-char"></div>
-</div>
-
 <%= simple_form_for(event) do |f| %>
   <%= f.input :name %>
   <%= f.input :start_time, as: :string, input_html: {class: "datepicker"} %>
   <%= f.input :end_time, as: :string, input_html: {class: "datepicker"} %>
   <%= f.input :location, required: true, input_html: {id: "flat_address"} %>
   <%= f.input :description %>
-  <%= f.submit class: "vale-buton" %>
+  <%= f.submit class: "vbtn btn-paradisio" %>
 <% end %>
