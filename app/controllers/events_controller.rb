@@ -11,7 +11,28 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    render :past_show if @event.end_time < Date.today
+    if @event.end_time < Date.today
+      @images = %w[
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068087/IMG_9805_dwsg7s.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9796_cz8acp.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9806_p3gvti.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9797_hb2d3n.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9794_nfjvqp.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9793_qykuzu.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9802_hhtsaz.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9807_jarebx.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9800_natezf.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9801_lf78ic.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9790_rtcehh.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9799_zdgqqz.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9792_hdjhtg.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9791_zv0nox.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9798_vtd5gs.jpg
+        https://res.cloudinary.com/dluzejx2p/image/upload/v1630068089/IMG_9808_tlfar4.jpg
+        ]
+      render :past_show
+    end
+
     @message = Message.new
     @invitation = Invitation.where(user: current_user).where(event: @event).first
     @markers = { lat: @event.latitude, lng: @event.longitude }
@@ -52,7 +73,8 @@ class EventsController < ApplicationController
       :description,
       :location,
       :start_time,
-      :end_time
+      :end_time,
+      :image
     )
   end
 

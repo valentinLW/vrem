@@ -3,6 +3,7 @@ class InvitationsController < ApplicationController
   before_action :set_invitation, only: %i[accept reject]
 
   def index
+    @all_users = User.all
     @invitations = Invitation.where(event: @event)
     @invitation = Invitation.new
     @not_guests = User.where.not(id: @event.invitations.pluck(:user_id))
