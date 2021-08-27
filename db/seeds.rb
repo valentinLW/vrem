@@ -1,4 +1,4 @@
-names = %w[marina ruy valentin stan]
+names = %w[marina ruy valentin stan tom]
 
 basic_messages = [
   "hi",
@@ -13,6 +13,23 @@ basic_messages = [
   "no",
   "how long will we be there?",
   "should we go to the lake after?"
+]
+
+mbp_images = %w[
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630068087/IMG_9805_dwsg7s.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9796_cz8acp.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9806_p3gvti.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9797_hb2d3n.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630068088/IMG_9794_nfjvqp.jpg
+]
+
+images = %w[
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/restaurant_neni_bikini_berlin_25_hours_hotel_aeacrw.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/Download_1_vrnrfz.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/gettyimages-1201202312_pil6ip.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/1-format43_sddyyk.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/GettyImages-1253501415_kbwpm0.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067178/berlin-volkspark-hasenheide-102_2400x1350_axp4an.jpg
 ]
 
 addresses = [
@@ -83,11 +100,21 @@ baf2 = {
   messages: basic_messages
 }
 
+mbp_e = {
+  name: "Mid Batch Party",
+  description: "Mid Batch Parteeeeeey Incoming. Hoolaaaa lovely souls. We are extremely looking forward to seeing you for new adventures! You made it to the half of the batch and that deserves a BIG Celebration!",
+  location: "Bernauer Str. 63-64, 13355 Berlin",
+  start_time: DateTime.parse("30/07/2021 18:30"),
+  end_time: DateTime.parse("31/07/2021 02:30"),
+  host: users[4], # tom
+  messages: basic_messages
+}
+
 events = []
 
 # dont create custom events twice
 if Event.where(name: "Breakfast at Filipes").length.zero?
-  events << baf || baf2
+  events << baf
 end
 
 # random events
@@ -113,8 +140,10 @@ addresses.each do |address|
   events << e
 end
 
+events = []
 # save events in database
 events.each do |event|
+  file = URI.open(images.sample)
   puts "creating #{event[:name]}:"
   e = Event.new(
     name:event[:name],
@@ -122,9 +151,13 @@ events.each do |event|
     location: event[:location],
     start_time: event[:start_time],
     end_time: event[:end_time],
-    user: event[:host],
+    user: event[:host]
   )
+  e.image.attach(io: file, filename: 'image1', content_type: 'image/png')
   e.save!
+
+  i = Invitation.new(event: e, user: users[3]) #stan
+  rand(1..2) == 1 ? i.accepted! : nil
 
   puts "\tcreating messages"
   event[:messages].each do |message|
@@ -137,3 +170,21 @@ events.each do |event|
     m.save!
   end
 end
+
+file = URI.open("https://res.cloudinary.com/dluzejx2p/image/upload/v1630069530/partner_20191111191717_jpc4jp.png")
+
+e = Event.new(
+    name:mbp_e[:name],
+    description: mbp_e[:description],
+    location: mbp_e[:location],
+    start_time: mbp_e[:start_time],
+    end_time: mbp_e[:end_time],
+    user: mbp_e[:host]
+  )
+  e.image.attach(io: file, filename: 'image1', content_type: 'image/png')
+  e.save!
+
+  users.take(users.count - 1).each do |user|
+    i = Invitation.new(event: e, user: user)
+    i.accepted!
+  end
