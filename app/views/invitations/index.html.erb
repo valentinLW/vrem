@@ -1,14 +1,19 @@
-<% @not_guests.each do |user|  %>
-  <% if user != current_user %>
-    <%= link_to(event_invite_path(@event, user), method: :post, remote: true, class: 'btn btn-success') do %>
-      <p>Invite <%= user.nickname %></p>
+<h3 class="swiper-header tac">Invitations</h3>
+
+<div class="invite">
+  <% @all_users.each do |user| %>
+    <% unless user == current_user %>
+      <% invitation = user.invitations.where(event_id: @event.id).first %>
+      <% if invitation %>
+        <button class="btn btn-primary">
+    <%= invitation.user.nickname %>
+  </button>
+  <p><%= invitation.status %></p>
+      <% else %>
+        <%= link_to(event_invite_path(@event, user), method: :post, remote: true, class: 'btn btn-success') do %>
+          <p>Invite <%= user.nickname %></p>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
-
-<% @invitations.each do |invitation| %>
-<div class="btn btn-primary">
-  <%= invitation.user.nickname %>
-  <%= invitation.status %>
 </div>
-<% end %>

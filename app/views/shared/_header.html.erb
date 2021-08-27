@@ -1,16 +1,20 @@
 <header>
-    <%= link_to events_path do %>
-      <i class="fas fa-angle-left"></i>
-    <% end%>
+  <%= link_to events_path do %>
+    <i class="fas fa-angle-left"></i>
+  <% end%>
 
-    <div class="empty-char"></div>
+  <div class="empty-char"></div>
 
-    <h2><%= 'Vremennyy' %></h2>
+  <%= link_to root_path do %>
+  <h2><%= 'Vremennyy' %></h2>
+  <% end %>
 
+  <div class="headlinks">
     <%= link_to((new_event_path), method: :get) do %>
       <i class="far fa-plus-square"></i>
     <% end%>
     <%= link_to((destroy_user_session_path), method: :delete) do %>
-     <i class="far fa-user"></i>
+    <i class="far fa-user"></i>
     <% end%>
+  </div>
 </header>
