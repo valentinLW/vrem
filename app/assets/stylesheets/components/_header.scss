@@ -1,7 +1,7 @@
 header {
   position: sticky;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   top: 0;
   width: 100vw;
@@ -26,6 +26,7 @@ header {
   }
   a {
     color: $aubergine;
+    text-decoration: none;
   }
 
   .empty-char {
