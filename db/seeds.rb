@@ -15,6 +15,15 @@ basic_messages = [
   "should we go to the lake after?"
 ]
 
+images = %w[
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/restaurant_neni_bikini_berlin_25_hours_hotel_aeacrw.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/Download_1_vrnrfz.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/gettyimages-1201202312_pil6ip.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/1-format43_sddyyk.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067177/GettyImages-1253501415_kbwpm0.jpg
+  https://res.cloudinary.com/dluzejx2p/image/upload/v1630067178/berlin-volkspark-hasenheide-102_2400x1350_axp4an.jpg
+]
+
 addresses = [
   "Genslerstraße 78, 13055 Berlin",
   "Brandenburgische Str. 110, 10713 Berlin",
@@ -114,7 +123,8 @@ addresses.each do |address|
 end
 
 # save events in database
-events.each do |event|
+events.take(5).each do |event|
+  file = URI.open(images.sample)
   puts "creating #{event[:name]}:"
   e = Event.new(
     name:event[:name],
@@ -124,7 +134,11 @@ events.each do |event|
     end_time: event[:end_time],
     user: event[:host],
   )
+  e.image.attach(io: file, filename: 'image1', content_type: 'image/png')
   e.save!
+
+  i = Invitation.new(event: e, user: users[3]) #stan
+  rand(1..2) == 1 ? i.accepted! : nil
 
   puts "\tcreating messages"
   event[:messages].each do |message|
