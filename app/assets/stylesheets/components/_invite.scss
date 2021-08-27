@@ -3,8 +3,8 @@
   height: 50px;
   margin: 10px 10px 5px 10px;
   vertical-align: middle;
-  padding-top: 10px;
   color: #fff;
+  opacity: 0.5;
 }
 
 .btn-success {
@@ -12,10 +12,16 @@
   height: 50px;
   margin: 10px 10px 5px 10px;
   vertical-align: middle;
-  padding-top: 10px;
   color: #fff;
+  opacity: 0.5;
 }
 
 .btn-success > p {
-  color: #fff;
+  color: #fff;;
+}
+
+.invite > p {
+  float: right;
+  padding: 25px 30px 0 0;
+  font-size: small
 }

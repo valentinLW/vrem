@@ -9,10 +9,10 @@
 <% end %>
 
 <% @invitations.each do |invitation| %>
-<div class="btn btn-primary">
+<button class="btn btn-primary">
   <%= invitation.user.nickname %>
-</div>
-<%= invitation.status %>
+</button>
+<p><%= invitation.status %></p>
 <% end %>
 
 </div>
