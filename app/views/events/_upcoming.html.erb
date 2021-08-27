@@ -4,9 +4,9 @@
       <h2><%= title %></h2>
       <i class="fas fa-angle-double-right"></i>
   </div>
+
   <% events.each do |event|%>
     <% if event.start_time > Date.today %>
-
       <%= link_to event_path(event) do %>
         <div class="event-card">
           <p class="event-date"><%= event.start_time.strftime("%d.%m.%Y") %></p>
