@@ -7,20 +7,21 @@ const initEventCable = () => {
 
     consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
       received(data) {
-        const { groups: { user_id } } = /data-user-id="(?<user_id>\d)"/.exec(data)
-        const current_user_id = document.getElementById("messages").dataset.currentUserId
+        const { groups: { new_message_user } } = /data-user-id="(?<new_message_user>\d)"/.exec(data)
+        const current_user = messagesContainer.dataset.currentUserId
 
-        const last_message = document.getElementById("messages").lastElementChild
-        const last_user_id = last_message.dataset.userId
-        const remove = last_user_id === user_id
-        if (remove) {
-          const i = last_message.querySelector("i")
-          i.parentElement.removeChild(i)
-        }
+        const last_message = messagesContainer.lastElementChild
+        const last_message_user = last_message.dataset.userId
 
-        if(current_user_id !== user_id) {
-          data = data.replaceAll("my-message", "others-message")
-        }
+        if(current_user === new_message_user) {
+          data.replace(/<i.*<\/i\>/, "")
+        } else {
+            data = data.replaceAll("my-message", "others-message")
+            if (last_message_user === new_message_user) {
+              const i = last_message.querySelector("i")
+              i.parentElement.removeChild(i)
+            }
+          }
 
         messagesContainer.insertAdjacentHTML('beforeend', data);
         messagesContainer.lastElementChild.scrollIntoView();
