@@ -5,6 +5,9 @@ body {
   background-repeat: no-repeat;
 }
 
+* { text-decoration: none !important;
+}
+
 div > main {}
 
 @media screen and (max-width: 400px) {

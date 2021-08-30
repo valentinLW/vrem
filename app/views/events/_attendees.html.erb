@@ -1,0 +1,35 @@
+<% attendees = Invitation.where(event_id: @event.id).pluck(:user_id, :status)%>
+  <p id="number" style="text-align: center"> <%= attendees.size %> people are joining this event: </p>
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="attendees">
+        <% attendees.each do |attendee| %>
+          <% if attendee[1] == "accepted" %>
+            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+              <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapsed collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="attendees-list">
+        <% attendees.each do |attendee| %>
+          <% if attendee[1] == "accepted" %>
+            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+              <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
