@@ -1,0 +1,83 @@
+.event {
+  position: absolute;
+}
+
+.event-header {
+  height: 30vh;
+  object-fit: cover;
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+}
+
+.event-description {
+  padding: 1.5rem;
+  z-index: 10;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background-color: white;
+  margin-top: -3vh;
+  position: relative;
+
+  #map {
+    border-radius: 1.5rem;
+    height: 200px !important;
+  }
+}
+
+.event-name {
+  font-size: 1.5rem;
+}
+
+.event-host {
+  display: flex;
+}
+
+.event-host {
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: grey;
+  }
+
+  p {
+    color: grey;
+    margin-left: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.event-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-details {
+  padding-top: 1.5rem;
+}
+
+.event-info {
+  display: flex;
+
+  margin-bottom: 1rem;
+
+  i {
+    font-size: 1.5rem;
+    color: $aubergine;
+    background-color: rgba($aubergine, 0.2);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: block;
+    margin-right: 1rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .fatgrey {
+    font-weight: bold;
+    color: grey;
+  }
+}
