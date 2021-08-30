@@ -1,5 +1,5 @@
 <% attendees = Invitation.where(event_id: @event.id).pluck(:user_id, :status)%>
-  <p id="number" style="text-align: center"> <%= attendees.size %> people are joining this event: </p>
+  <p id="number" style="text-align: center"> <%= Invitation.where(event_id: @event.id).accepted.size %> people are joining this event: </p>
 <div id="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
@@ -8,7 +8,7 @@
           <div class="attendees">
         <% attendees.each do |attendee| %>
           <% if attendee[1] == "accepted" %>
-            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+            <div class="attending" style="background-image: url(<%= cl_image_path(User.find(attendee[0]).profile_picture.key) %>); background-size: cover">
               <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
             </div>
           <% end %>
@@ -23,7 +23,7 @@
         <div class="attendees-list">
         <% attendees.each do |attendee| %>
           <% if attendee[1] == "accepted" %>
-            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+            <div class="attending" style="background-image: url(<%= cl_image_path(User.find(attendee[0]).profile_picture.key) %>); background-size: cover">
               <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
             </div>
           <% end %>
