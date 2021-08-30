@@ -5,10 +5,8 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.event = @event
     @message.user = current_user
-    if @message.save
+    if @message.save!
       EventChannel.broadcast_to(@event, render_to_string(partial: "message", locals: { message: @message }))
-    else
-      render "events/show"
     end
   end
 

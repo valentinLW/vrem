@@ -1,3 +1,5 @@
+$chat-margin: 0.2rem;
+
 #messages, form {
   padding: 0 0.5rem;
   padding-top: 0.5rem;
@@ -29,32 +31,44 @@
     max-width: 75%;
     padding: 0.5rem .875rem;
     word-wrap: break-word;
-    margin-bottom: 0;
+    margin-bottom: $chat-margin;
   }
 }
 
-.message-container {
+.emoji-container {
+  font-size: 3rem;
+  line-height: 3rem;
+
+  p {
+    margin-bottom: $chat-margin;
+  }
+}
+
+.message-container, .emoji-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.1rem;
 }
 
-.message-container {
+.message-container, .emoji-container {
   .my-message {
     margin-left: auto;
   }
+
+  .others-message {
+    margin-right: auto;
+  }
+}
+
+.message-container {
   p.my-message {
     margin-left: auto;
     background-color: #75475b6f;
     color: #fff;
   }
 
-  .others-message {
-    margin-right: auto;
-  }
   p.others-message {
     background-color: #004837;
-    opacity: 40%;
     color: white;
   }
 }
