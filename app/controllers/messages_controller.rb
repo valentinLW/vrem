@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
+  before_action :set_event
+
   def create
-    @event = Event.find(params[:event_id])
     @message = Message.new(message_params)
     @message.event = @event
     @message.user = current_user
@@ -13,15 +14,16 @@ class MessagesController < ApplicationController
     end
   end
 
-
   def show
-    @event = Event.find(params[:event_id])
     @message = Message.new
     @disable_footer = @disable_header = true
   end
 
-
   private
+
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
   def message_params
     params.require(:message).permit(:content)
