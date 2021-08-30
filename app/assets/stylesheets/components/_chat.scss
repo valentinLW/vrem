@@ -8,10 +8,9 @@ $chat-margin: 0.2rem;
 #messages {
   font-size: 1.25rem;
   width: 100vw;
-  height: 80vh;
   position: relative;
   overflow: scroll;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .chat-input {
@@ -80,50 +79,4 @@ $chat-margin: 0.2rem;
     padding: 0 0.5rem;
     font-style: normal;
   }
-}
-
-.chat-header {
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  width: 100vw;
-  background: asset-url('header.jpeg');
-  padding: 0.5rem 0rem;
-  z-index: 100;
-}
-
-.chat-header {
-  display: flex;
-  h2 {
-    display: inline;
-    line-height: 2rem;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 0;
-    color: $aubergine;
-    font-size: 1.8rem;
-  }
-
-  i {
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-  }
-  a {
-    color: $aubergine;
-  }
-
-  .empty-char {
-    width: 1rem;
-  }
-}
-
-.vale-buton {
-  border-radius: 0.5rem;
-  background-color: $aubergine;
-  color: $ice;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin: 0 auto;
 }

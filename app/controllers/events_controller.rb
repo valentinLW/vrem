@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
     @invitations = Invitation.where(user: current_user).where(status: :pending)
     @invited = Invitation.where(user: current_user).where(status: :accepted)
-
+    @disable_back = true
   end
 
   def show

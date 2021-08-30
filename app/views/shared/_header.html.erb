@@ -1,13 +1,24 @@
 <header>
-  <%= link_to('#',onclick: "window.history.back(); return false;", class:"back-link") do %>
-    <i class="fas fa-angle-left"></i>
-  <% end%>
   <div class="header-group">
-    <%= link_to(new_event_path, class:"back-link") do %>
+    <% unless @disable_back %>
+      <%= link_to('#',onclick: "window.history.back(); return false;", class:"header-link") do %>
+        <i class="fas fa-angle-left"></i>
+      <% end%>
+    <% end %>
+  </div>
+  <div class="header-group">
+    <%= link_to(new_event_path, class:"header-link") do %>
         <i class="far fa-plus-square"></i>
     <% end%>
-    <%= link_to(events_path, class:"back-link") do %>
-      <i class="far fa-user"></i>
-    <% end%>
+
+    <% if current_user %>
+      <%= link_to(destroy_user_session_path, class:"header-link", method: :delete) do %>
+        <i class="fas fa-user-times"></i>
+      <% end%>
+    <% else %>
+      <%= link_to(new_user_session_path, class:"header-link") do %>
+        <i class="fas fa-user"></i>
+      <% end%>
+    <% end %>
   </div>
 </header>
