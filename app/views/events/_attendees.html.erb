@@ -8,7 +8,7 @@
           <div class="attendees">
         <% attendees.each do |attendee| %>
           <% if attendee[1] == "accepted" %>
-            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+            <div class="attending" style="background-image: url(<%= cl_image_path(User.find(attendee[0]).profile_picture.key) %>); background-size: cover">
               <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
             </div>
           <% end %>
@@ -23,7 +23,7 @@
         <div class="attendees-list">
         <% attendees.each do |attendee| %>
           <% if attendee[1] == "accepted" %>
-            <div class="attending" style="background-image: url(/assets/party4.jpg)">
+            <div class="attending" style="background-image: url(<%= cl_image_path(User.find(attendee[0]).profile_picture.key) %>); background-size: cover">
               <p class="att-avatar"><%= User.find(attendee[0]).nickname.capitalize %></p>
             </div>
           <% end %>
