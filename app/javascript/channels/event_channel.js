@@ -2,12 +2,15 @@ import consumer from "./consumer";
 
 const initEventCable = () => {
   const messagesContainer = document.getElementById('messages');
+  const form = document.getElementById("new_message")
+
   if (messagesContainer) {
     const id = messagesContainer.dataset.eventId;
 
     consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
       received(data) {
         console.log(data)
+        form.reset();
         const { groups: { new_message_user } } = /data-user-id="(?<new_message_user>\d)"/.exec(data)
         const current_user = messagesContainer.dataset.currentUserId
 
