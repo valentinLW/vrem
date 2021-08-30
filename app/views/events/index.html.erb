@@ -1,14 +1,20 @@
-
- <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <%= render "upcoming", events:@invited.map{ |i| i.event }, title: "Upcoming Events" %>
+<% events = Event.where(id: @invited.pluck(:event_id)) %>
+<% invitations = Event.where(id: @invitations.pluck(:event_id)) %>
+<div class="wholepage">
+  <div class="placeholding"> Calendar </div>
+  <div class="outter-box" style="display: block">
+    <div class="upcoming" style="display: flex">
+    <% events.each do |event|%>
+      <% if event.start_time > Date.today %>
+        <%= render "eventcards", event:event %>
+      <% end %>
+    <% end %>
     </div>
-    <div class="swiper-slide">
-      <%= render "upcoming", events:@invitations.map{ |i| i.event }, title: "Your Invitations" %>
+    <div class="invitations" style="display: flex">
+    <% invitations.each do |event|%>
+      <% if event.start_time > Date.today %>
+        <%= render "eventcards", event:event %>
+      <% end %>
+    <% end %>
     </div>
-    <div class="swiper-slide">
-      <%= render 'calendar' %>
-    </div>
-  </div>
 </div>

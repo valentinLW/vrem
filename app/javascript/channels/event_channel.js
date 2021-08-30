@@ -15,7 +15,7 @@ const initEventCable = () => {
         const current_user = messagesContainer.dataset.currentUserId
 
         const last_message = messagesContainer.lastElementChild
-        const last_message_user = last_message.dataset.userId
+        const last_message_user = last_message?.dataset.userId
 
         if(current_user === new_message_user) {
           data = data.replace(/<i.*<\/i\>/, "")
