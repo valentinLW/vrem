@@ -14,7 +14,7 @@ const initEventCable = () => {
         const last_message_user = last_message.dataset.userId
 
         if(current_user === new_message_user) {
-          data.replace(/<i.*<\/i\>/, "")
+          data = data.replace(/<i.*<\/i\>/, "")
         } else {
             data = data.replaceAll("my-message", "others-message")
             if (last_message_user === new_message_user) {

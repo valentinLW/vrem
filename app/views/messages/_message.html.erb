@@ -1,8 +1,8 @@
-<% hide_author ||= false %>
+<% show_author = default_value if local_assigns[:show_author].nil? %>
 <% class_name = message.user == current_user ? 'my-message' : 'others-message' %>
 <div class="message-container" id="message-<%= message.id %>" data-user-id="<%= message.user.id %>">
   <p class="<%= class_name%>"><%= message.content %></p>
-  <% if !hide_author %>
+  <% if show_author %>
     <i class="nickname <%= class_name%>"><%= message.user.nickname %></i>
   <% end %>
 </div>

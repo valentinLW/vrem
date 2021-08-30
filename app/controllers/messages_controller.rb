@@ -6,9 +6,8 @@ class MessagesController < ApplicationController
     @message.event = @event
     @message.user = current_user
     if @message.save
-      @class_name = "others"
       EventChannel.broadcast_to(@event, render_to_string(partial: "message", locals: { message: @message }))
-      redirect_to event_chat_path(@event, anchor: "message-#{@message.id}")
+      redirect_to event_chat_path(@event)
     else
       render "events/show"
     end
