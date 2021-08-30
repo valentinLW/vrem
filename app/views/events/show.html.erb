@@ -22,21 +22,28 @@
     <%= render 'events/attendees' %>
     <div class="event-details">
       <div class="event-info">
-        <i class="far fa-clock"></i>
+        <div class="i-container">
+          <i class="far fa-clock"></i>
+        </div>
         <div>
           <p class="fatgrey"><%= @event.start_time.strftime("%d.%m.%Y") %></p>
           <p><%= @event.start_time.strftime("%H:%M") %></p>
         </div>
       </div>
       <div class="event-info">
-        <i class="far fa-clock"></i>
+        <div class="i-container">
+          <i class="far fa-clock"></i>
+        </div>
         <div>
           <p class="fatgrey"><%= @event.end_time.strftime("%d.%m.%Y") %></p>
           <p><%= @event.end_time.strftime("%H:%M") %></p>
         </div>
       </div>
       <div class="event-info">
-        <i class="fas fa-info"></i> <p><%= @event.description %></p>
+        <div class="i-container">
+          <i class="fas fa-info" style="font-size: 1.2rem;"></i>
+        </div>
+        <p><%= @event.description %></p>
       </div>
     </div>
     <div id="map"

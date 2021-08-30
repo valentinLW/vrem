@@ -59,18 +59,7 @@
 
 .event-info {
   display: flex;
-
   margin-bottom: 1rem;
-
-  i {
-    font-size: 1.5rem;
-    color: $aubergine;
-    background-color: rgba($aubergine, 0.2);
-    border-radius: 1rem;
-    padding: 0.5rem;
-    display: block;
-    margin-right: 1rem;
-  }
 
   p {
     margin-bottom: 0;
@@ -79,5 +68,20 @@
   .fatgrey {
     font-weight: bold;
     color: grey;
+  }
+}
+
+.i-container {
+  min-width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($aubergine, 0.2);
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+
+  i {
+    font-size: 1.5rem;
   }
 }
