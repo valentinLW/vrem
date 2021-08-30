@@ -1,9 +1,9 @@
 <% show_author = true if local_assigns[:show_author].nil? %>
-<% class_name = message.user == current_user ? 'my-message' : 'others-message' %>
-<% emoji = message.content.scan(/(\p{Emoji}){1,3}/).count == 1 ? "emoji" : "message" %>
-<div class="<%= emoji%>-container" id="message-<%= message.id %>" data-user-id="<%= message.user.id %>">
-  <p class="<%= class_name%>"><%= message.content %></p>
+<% user_class = message.user == current_user ? 'my-message' : 'others-message' %>
+<% container_class = message.content.gsub(Unicode::Emoji::REGEX, "") == "" && message.content.scan(Unicode::Emoji::REGEX).count.between?(1, 3) ? "emoji" : "message" %>
+<div class="<%= container_class%>-container" id="message-<%= message.id %>" data-user-id="<%= message.user.id %>">
+  <p class="<%= user_class%>"><%= message.content %></p>
   <% if show_author %>
-    <i class="nickname <%= class_name%>"><%= message.user.nickname %></i>
+    <i class="nickname <%= user_class%>"><%= message.user.nickname %></i>
   <% end %>
 </div>
