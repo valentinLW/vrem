@@ -1,0 +1,19 @@
+.attendees {
+  display: flex;
+  overflow: scroll;
+  padding: 5px;
+}
+
+.attending {
+  padding: 9px;
+  border: 1px solid black;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  margin-left: 25px;
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
+  font-size: 0px;
+  background-image: url('/assets/party1.jpg');
+  background-size: cover;
+
+}

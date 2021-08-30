@@ -36,4 +36,25 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
+  <div class="container">
+    <p> Attendees: </p>
+    <div class="attendees">
+      <% attendees = Invitation.where(event_id: @event.id).pluck(:user_id, :status)%>
+        <% attendees.each do |attendee| %>
+          <% if attendee[1] == "accepted" %>
+            <p class="attending" style="background-image: url('app/images/assets/party1.jpg')">
+              <%= User.find(attendee[0]).nickname.capitalize %>
+            </p>
+          <% end %>
+        <% end %>
+        <% attendees.each do |attendee| %>
+          <% if attendee[1] == "accepted" %>
+            <p class="attending" style="background-image: url('assets/party2.jpg')">
+              <%= User.find(attendee[0]).nickname.capitalize %>
+            </p>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
 </div>
