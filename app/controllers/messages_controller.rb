@@ -12,7 +12,6 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.new
-    @disable_footer = @disable_header = true
   end
 
   private
