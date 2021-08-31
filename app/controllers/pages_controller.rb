@@ -5,7 +5,4 @@ class PagesController < ApplicationController
     @disable_header = true
   end
 
-  def devise
-    @disable_header = true
-  end
 end

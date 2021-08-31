@@ -1,13 +1,12 @@
-<% @uploads = Upload.where(event_id: @event.id) %>
-  <div class="event-row">
-    <% @uploads.each do |upload| %>
-      <div class="event-column">
-      <% upload.media.each do |image| %>
-        <div class="event-media">
-          <%= cl_image_tag (image.key) %>
-        </div>
-      <% end %>
+
+<div class="event-row">
+  <% @uploads.each do |upload| %>
+    <div class="event-column">
+    <% upload.media.each do |image| %>
+      <div class="event-media">
+        <%= cl_image_tag (image.key) %>
       </div>
     <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
