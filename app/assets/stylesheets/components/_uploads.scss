@@ -1,0 +1,42 @@
+.upload-container {
+  z-index: 10;
+  position: relative;
+  background-color: white;
+  overflow:hidden;
+}
+
+.uploads {
+  img {
+    width: 33vw;
+    height: 33vw;
+    object-fit: cover;
+    padding: 0.1rem;
+  }
+
+  img:nth-child(4) {
+    width: 66vw;
+    height: 66vw;
+  }
+
+  img:nth-child(4) {
+    width: 66vw;
+    height: 66vw;
+  }
+
+  img:nth-child(10) {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+.f-left {
+  img {
+    float: left;
+  }
+}
+
+.f-right {
+  img {
+    float: right;
+  }
+}
