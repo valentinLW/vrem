@@ -15,7 +15,7 @@
 }
 
 .titles {
-  margin-top: 65px;
+  padding-top: 75px;
   margin-left: 20px;
   color: $aubergine;
   position: sticky;
@@ -23,7 +23,7 @@
 }
 
 .nomargin {
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .inpic {
@@ -36,9 +36,10 @@
 
 .event-date {
   color: #673c4f;
-  padding: 13px;
+  padding: 11px;
+  padding-top: 15px;
   height: 50px;
-  width: 50px;
+  width: 55px;
   background-color: white;
   border-radius: 30%;
   font-size: 13px;
@@ -49,6 +50,7 @@
 
 .day {
   font-weight: bold;
+  margin-left: 6px;
 }
 
 .userpic {

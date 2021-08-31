@@ -12,125 +12,72 @@ a:visited {
 }
 
 .btn-boton {
-	min-width: 40px;
-	position: relative;
-	display: inline-block;
-
-	text-align: center;
-	text-transform: uppercase;
-
-	padding: 5px;
-
-  font-family: $body-font;
-	font-size: 75%;
-	font-weight: 600;
-  padding: 5px 15px;
-
-	color: lighten($aubergine, 20%);
-  background-color: $ice;
-
-	transition: 0.5s;
-}
-
-.btn .btn-boton {
-  min-width: 40px;
-  position: relative;
   display: inline-block;
-
-  text-align: center;
+  padding: .75rem 1.25rem;
+  border-radius: 20px;
+  color: #fff;
   text-transform: uppercase;
-
-  padding: 5px;
-
-  font-family: $body-font;
-  font-size: 75%;
-  font-weight: 600;
-  padding: 5px 15px;
-
-  color: lighten($aubergine, 20%);
-  background-color: $ice;
-
-  transition: 0.5s;
-}
-
-.btn-boton:before {
-	position: absolute;
-	content:"";
-	border-top: 5px solid lighten($ice, 5%);
-	border-left: 5px solid lighten($ice, 5%);
-	border-right: 5px solid darken($ice, 5%);
-	border-bottom: 5px solid darken($ice, 5%);
-
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-
-  transition: 0.5s;
-
-}
-
-.btn-boton:hover, .btn-boton:active {
-	box-shadow: 3px 3px darken($ice, 5%), -3px -3px lighten($ice, 10%);
-  color: $aubergine;
-  text-decoration: none;
-	cursor: pointer;
-		&::before {
-		border: 0px ;
-	}
-}
-
-.vbtn {
-  padding: 0.5rem 1.5rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.5rem;
-  color: $ice;
-}
-
-.btn-paradisio {
-  background-color: $paradiso;
-}
-
-.btn-aubergine {
-  background-color: $aubergine;
-}
-
-.btn-darkgreyish {
-  background-color: $darkgreyish;
-}
-
-.btn-red {
-  background-color: #882424;
-}
-
-.btn-green {
-  background-color: #3a9c3f;
-}
-
-.nbtn {
-  border-radius: 1.5rem;
-  border: 0.15rem solid black;
-  padding: 0.5rem 1.5rem;
-
-  a {
-    text-decoration: none;
-    color: inherit;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $aubergine;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($aubergine, 15%);
+    transition: all .2s;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
   }
 }
 
-.n-paradiso {
-  border-color: $paradiso;
-  color: $paradiso;
-}
 
-.n-aubergine {
-  border-color: $aubergine;
-  color: $aubergine;
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
 }
-
-.in-aubergine {
-  border-color: $aubergine;
-  color: white;
-  background-color: $aubergine;
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+span {
+  display: block;
+  margin-top: 2rem;
+  font-size: .7rem;
+  color: #777;
+  a {
+    font-size: .7rem;
+    color: #999;
+    text-decoration: underline;
+  }
 }

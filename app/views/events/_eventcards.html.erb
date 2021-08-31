@@ -8,7 +8,7 @@
     <div class="inpic">
       <div class="event-date">
         <p class="day"> <%= event.start_time.strftime("%d") %> </p>
-        <p><%= event.start_time.strftime("%b") %></p>
+        <p class="month"><%= event.start_time.strftime("%b") %></p>
       </div>
       <%= cl_image_tag(event.user.profile_picture.key, class: "userpic") %>
     </div>

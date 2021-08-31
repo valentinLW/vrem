@@ -12,7 +12,7 @@
     <% end %>
     </div>
     <p class="titles nomargin"> INVITATIONS </p>
-    <div class="invitations" style="display: flex">
+    <div class="invitings" style="display: flex">
     <% invitations.each do |event|%>
       <% if event.start_time > Date.today %>
         <%= render "eventcards", event:event %>

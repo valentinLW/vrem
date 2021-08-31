@@ -1,16 +1,15 @@
-
+<div class="allofit">
+  <div class="flexbox-home">
+  <h1> Welcome! </h1>
+    <div class="links">
+      <%= link_to((user_session_path), method: :get, :class => 'btn-boton') do %>
+        Login
+      <% end%>
     </div>
-    <div class="flexbox-home">
-      <div class="links">
-        <%= link_to((user_session_path), method: :get, :class => 'btn-boton') do %>
-          Login
-        <% end%>
-      </div>
-      <div class="links">
-        <%= link_to((new_user_registration_path), method: :get, :class => 'btn-boton') do %>
-          Sign UP
-        <% end%>
-      </div>
+    <div class="links">
+      <%= link_to((new_user_registration_path), method: :get, :class => 'n') do %>
+        Sign UP
+      <% end%>
     </div>
   </div>
 </div>

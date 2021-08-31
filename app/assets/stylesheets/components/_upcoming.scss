@@ -3,7 +3,6 @@
   width: 100%;
   height: 100%;
   background-color: #173741;
-
 }
 
 .placeholding {
@@ -17,8 +16,16 @@
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   display: flex;
-  overflow-x: scroll;
+
+  .upcoming {
+    overflow-x: scroll;
+  }
+
+  .invitings {
+    overflow-x: scroll;
+  }
 }
+
 
 h4 {
   color: white;

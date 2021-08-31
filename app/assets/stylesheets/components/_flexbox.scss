@@ -3,20 +3,14 @@
   justify-content: space-between;
   text-align: center;
   .links {
-    display: block
+    display: block;
   }
 }
 
-.flexbox-home {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  margin-top: 48px;
-
-  .links {
-    display: block
-  }
+.links {
+  display: block;
 }
+
 
 .block {
   display: block;
