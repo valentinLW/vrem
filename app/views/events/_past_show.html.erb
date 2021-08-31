@@ -1,13 +1,18 @@
 <% @uploads = Upload.where(event_id: @event.id) %>
-  <div class="event-row">
-    <% @uploads.each do |upload| %>
-      <div class="event-column">
-      <% upload.media.each do |image| %>
-        <div class="event-media">
-          <%= cl_image_tag (image.key) %>
-        </div>
+<% keys = [] %>
+<% @uploads.each do |upload| %>
+  <% upload.media.each do |image| %>
+    <% keys << image.key %>
+  <% end %>
+<% end %>
+
+<div class="upload-container">
+  <% boxes = keys.each_slice(10).to_a %>
+  <% boxes.each.with_index do |keys, index| %>
+    <div class="uploads <%= index.even? ? "f-left" : "f-right" %>">
+      <% keys.each do |key| %>
+        <%= cl_image_tag(key) %>
       <% end %>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
