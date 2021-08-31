@@ -10,7 +10,7 @@
   <% boxes.each.with_index do |keys, index| %>
     <div class="uploads <%= index.even? ? "f-left" : "f-right" %>">
       <% keys.each do |key| %>
-      <%= link_to cl_image_tag(key), event_uploads_path(@event) %>
+      <%= link_to cl_image_tag(key), event_uploads_path(@event, query:key)  %>
       <% end %>
     </div>
   <% end %>
