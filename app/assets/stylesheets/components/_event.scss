@@ -7,10 +7,12 @@
   object-fit: cover;
   width: 100vw;
   z-index: 1;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .event-description {
+  width: 100vw;
   padding: 1.5rem;
   z-index: 10;
   border-top-left-radius: 1.5rem;
