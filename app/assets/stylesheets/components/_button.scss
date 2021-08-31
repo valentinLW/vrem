@@ -107,3 +107,30 @@ a:visited {
 .btn-green {
   background-color: #3a9c3f;
 }
+
+.nbtn {
+  border-radius: 1.5rem;
+  border: 0.15rem solid black;
+  padding: 0.5rem 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.n-paradiso {
+  border-color: $paradiso;
+  color: $paradiso;
+}
+
+.n-aubergine {
+  border-color: $aubergine;
+  color: $aubergine;
+}
+
+.in-aubergine {
+  border-color: $aubergine;
+  color: white;
+  background-color: $aubergine;
+}

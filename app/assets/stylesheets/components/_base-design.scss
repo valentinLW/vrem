@@ -1,18 +1,4 @@
 
 
-div > main {}
-
-@media screen and (max-width: 400px) {
-  div.header {
-    height: 40px;
-  }
-
-  div.header>img {
-    width: 160px;
-    height: 80px;
-    left: 35px;
-  }
-  div.footer {
-    height: 50px;
-  }
+* { text-decoration: none !important;
 }

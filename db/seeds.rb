@@ -1,4 +1,4 @@
-names = %w[marina ruy valentin stan tom]
+names = %w[marina valentin stan ruy tom]
 
 basic_messages = [
   "hi",
@@ -78,6 +78,23 @@ else
   puts "Users already exist"
   users = User.all
 end
+
+#profile_picture
+file1 = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1626782776/qxjbfihftnyi9phgnb3l.jpg')
+file2 = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1626805000/yppphiokhswqo7b4ar1b.jpg')
+file3 = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1625037044/xyvhwprahklgd6nke6rd.jpg')
+file4 = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1627363623/dxcvc5uqkimpnpkhgswe.jpg')
+file6 = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1625037044/xyvhwprahklgd6nke6rd.jpg')
+users[0].profile_picture.attach(io: file1, filename: 'profile_picture.png', content_type: 'image/png')
+users[0].save!
+users[1].profile_picture.attach(io: file2, filename: 'profile_picture.png', content_type: 'image/png')
+users[1].save!
+users[2].profile_picture.attach(io: file3, filename: 'profile_picture.png', content_type: 'image/png')
+users[2].save!
+users[3].profile_picture.attach(io: file4, filename: 'profile_picture.png', content_type: 'image/png')
+users[3].save!
+users[4].profile_picture.attach(io: file6, filename: 'profile_picture.png', content_type: 'image/png')
+users[4].save!
 
 # custom events
 baf = {
