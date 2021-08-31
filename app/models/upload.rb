@@ -1,5 +1,5 @@
 class Upload < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  has_one_attached :media
+  has_many_attached :media
 end
