@@ -1,9 +1,9 @@
 .event-card {
   background-color: transparent;
-  box-shadow: 2px 7px 10px #b7b7b7a0;
   border-radius: 2px;
-  border: 1px solid $greyish;
   margin-bottom: 1rem;
+  padding: 10px;
+  padding-top: 40px;
 }
 
 .event-date {
@@ -11,6 +11,7 @@
   color: #673c4f;
   margin-bottom: 0;
   padding-right: 1rem;
+  width: 220px;
  }
 
  .event-host {
