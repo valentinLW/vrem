@@ -7,6 +7,7 @@ class InvitationsController < ApplicationController
     @invitations = Invitation.where(event: @event)
     @invitation = Invitation.new
     @not_guests = User.where.not(id: @event.invitations.pluck(:user_id))
+    @disable_nav_right = true
   end
 
   def create
