@@ -1,4 +1,6 @@
-<% events = Event.where(id: @invited.pluck(:event_id)) %>
+<%
+=begin%>
+ <% events = Event.where(id: @invited.pluck(:event_id)) %>
 <% invitations = Event.where(id: @invitations.pluck(:event_id)) %>
 <div class="wholepage">
   <div class="placeholding"> Calendar </div>
@@ -20,3 +22,5 @@
     <% end %>
     </div>
 </div>
+<%
+=end%>
