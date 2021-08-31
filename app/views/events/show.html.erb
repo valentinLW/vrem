@@ -21,13 +21,11 @@
     </div>
 
     <%= render 'events/attendees' %>
-
-    <%
-=begin%>
- <%= render 'events/event_details' %>
-<%
-=end%>
-    <%= render 'events/past_show' %>
+    <% if @event.start_time > Date.today %>
+      <%= render 'events/event_details' %>
+    <% else %>
+      <%= render 'events/past_show' %>
+    <% end %>
 
   </div>
 </div>
