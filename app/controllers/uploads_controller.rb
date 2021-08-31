@@ -8,7 +8,7 @@ class UploadsController < ApplicationController
     @upload = Upload.new(upload_params)
     @upload.user = current_user
     @upload.event = Event.find(params[:event_id])
-    if @upload.save
+    if @upload.save!
       redirect_to event_path(@upload.event)
     else
       render :new
@@ -19,5 +19,5 @@ end
   private
 
 def upload_params
-  params.require(:upload).permit(:images)
+  params.require(:upload).permit(:media => [])
 end
