@@ -1,20 +1,39 @@
-<h2>Log in</h2>
+<div class="wholepage">
+  <div class="header-logo"></div>
+  <div class="outter-box" style="display: block">
+
+  <div class="login">
+
+<h2 class="welcome-title">Welcome to Vremennyy!</h2>
+<p class="welcome-descr">Keep your events organized!</p>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
+                placeholder: "Email",
+                label: false,
                 input_html: { autocomplete: "email" } %>
     <%= f.input :password,
                 required: false,
+                placeholder: "Password",
+                label: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in", :class => ' btn-paradisio' %>
+    <%= f.button :submit, "Sign in", :class => ' btn-paradisio' %>
   </div>
 <% end %>
+  <div class="login_links">
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+    <div class="sign-up">
+      <p>Don't have any account yet?</p><%= link_to "Sign up!", new_registration_path(resource_name) %>
+    </div>
+  </div>
+  </div>
 
-<%= render "devise/shared/links" %>
+  </div>
+</div>
