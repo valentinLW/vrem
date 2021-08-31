@@ -1,9 +1,25 @@
-<%= simple_form_for(event) do |f| %>
-  <%= f.input :name %>
+<h1 class="vform-title"><%= title %></h1>
+<%= simple_form_for(event, html: { class: "vform"}) do |f| %>
+  <div class="vform-group">
+    <%= f.label :name %>
+    <%= f.input :name, label: false, input_html: {class: "vinput"} %>
+  </div>
   <%= f.file_field :image %>
-  <%= f.input :start_time, as: :string, input_html: {class: "datepicker"} %>
-  <%= f.input :end_time, as: :string, input_html: {class: "datepicker"} %>
-  <%= f.input :location, required: true, input_html: {id: "flat_address"} %>
-  <%= f.input :description %>
-  <%= f.submit class: "vbtn btn-paradisio" %>
+  <div class="vform-group">
+    <%= f.label :start_time %>
+    <%= f.input :start_time, label: false, as: :string, input_html: {class: "datepicker vinput"} %>
+  </div>
+  <div class="vform-group">
+    <%= f.label :end_time %>
+    <%= f.input :end_time, label: false, as: :string, input_html: {class: "datepicker vinput"} %>
+  </div>
+  <div class="vform-group">
+    <%= f.label :location %>
+    <%= f.input :location, label: false, required: true, input_html: {id: "flat_address", class: "vinput"} %>
+  </div>
+  <div class="vform-group">
+    <%= f.label :description %>
+    <%= f.input :description, label: false, input_html: {class: "vinput"} %>
+  </div>
+  <%= f.submit class: "vform-submit" %>
 <% end %>
