@@ -3,6 +3,7 @@
 <div class="wholepage">
   <div class="placeholding"> Calendar </div>
   <div class="outter-box" style="display: block">
+    <p class="titles"> UPCOMING EVENTS</p>
     <div class="upcoming" style="display: flex">
     <% events.each do |event|%>
       <% if event.start_time > Date.today %>
@@ -10,6 +11,7 @@
       <% end %>
     <% end %>
     </div>
+    <p class="titles nomargin"> INVITATIONS </p>
     <div class="invitations" style="display: flex">
     <% invitations.each do |event|%>
       <% if event.start_time > Date.today %>
