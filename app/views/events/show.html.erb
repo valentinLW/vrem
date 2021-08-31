@@ -23,9 +23,10 @@
     <%= render 'events/attendees' %>
     <% if @event.start_time > Date.today %>
       <%= render 'events/event_details' %>
-    <% else %>
-      <%= render 'events/past_show' %>
     <% end %>
 
   </div>
+  <% if @event.start_time < Date.today %>
+      <%= render 'events/past_show' %>
+  <% end %>
 </div>
