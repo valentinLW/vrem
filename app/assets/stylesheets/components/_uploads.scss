@@ -1,0 +1,36 @@
+.uploads-container {
+  width: 100vw;
+
+}
+
+.event-img {
+  width: 90vw;
+}
+
+.event-row {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+}
+
+.event-column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+
+.event-media {
+  margin: 2px;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+  img {
+    width: 45vw;
+
+  }
+}
