@@ -9,7 +9,6 @@ const initEventCable = () => {
 
     consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
       received(data) {
-        console.log(data)
         form.reset();
         const { groups: { new_message_user } } = /data-user-id="(?<new_message_user>\d)"/.exec(data)
         const current_user = messagesContainer.dataset.currentUserId

@@ -1,25 +1,68 @@
 .event-card {
   background-color: transparent;
-  border-radius: 2px;
-  margin-bottom: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.533);
+  border-radius: 15px;
+  margin: 13px;
+  margin-top: 15px;
+
+  h2 {
+  font-size: 23px;
   padding: 10px;
-  padding-top: 40px;
+  color: $paradiso;
+  font-family: $body-font;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.titles {
+  margin-top: 65px;
+  margin-left: 20px;
+  color: $aubergine;
+  position: sticky;
+  left: 20px;
+}
+
+.nomargin {
+  margin-top: 30px;
+}
+
+.inpic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -66px;
+  padding: 10px;
 }
 
 .event-date {
-  text-align: right;
   color: #673c4f;
+  padding: 13px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 30%;
+  font-size: 13px;
   margin-bottom: 0;
-  padding-right: 1rem;
-  width: 220px;
- }
+  line-height: 1px;
+  text-align: center;
+}
 
- .event-host {
+.day {
+  font-weight: bold;
+}
+
+.userpic {
+  border-radius: 50%;
+  height: 45px;
+  box-shadow: 0px 0px 35px rgb(76, 76, 76);
+}
+
+.event-host {
   text-align: left;
   color: #2d6f6d;
   margin-bottom: 0;
   padding-left: 1rem;
- }
+}
 
 .event-img {
   height: 120px;
@@ -30,12 +73,13 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-
-  h2 {
-    font-size: 2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
+  height: 150px;
+  width: 250px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
+
+
 
 .event-details {
   padding: 1rem 0;
