@@ -35,6 +35,10 @@
   border-radius: 5px;
 }
 
+#user_remember_me {
+  padding-bottom: 10px;
+}
+
 .btn-paradisio {
   width: 100%;
   color: #fff;
@@ -51,12 +55,12 @@
 }
 
 .forgot-password {
-  padding: 0px 0 0 0;
+  padding: 0;
 }
 
 .sign-up {
   padding: 40px 0 20px 0;
   position: absolute;
   bottom: 0;
-  left: 90px;
+  left: 70px;
 }
