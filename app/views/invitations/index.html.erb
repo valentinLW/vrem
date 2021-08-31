@@ -1,19 +1,29 @@
-<h3 class="swiper-header tac">Invitations</h3>
+<h3 class="vform-title">Invitations</h3>
 
-<div class="invite">
+<div class="invitations">
   <% @all_users.each do |user| %>
     <% unless user == current_user %>
-      <% invitation = user.invitations.where(event_id: @event.id).first %>
-      <% if invitation %>
-        <button class="btn btn-primary">
-    <%= invitation.user.nickname %>
-  </button>
-  <p><%= invitation.status %></p>
-      <% else %>
-        <%= link_to(event_invite_path(@event, user), method: :post, remote: true, class: 'btn btn-success') do %>
-          <p>Invite <%= user.nickname %></p>
+      <div class="invite-container">
+        <%= cl_image_tag(user.profile_picture.key, class: "") %>
+        <div>
+          <p class="nickname"><%= user.nickname %></p>
+          <p class="email"><%= user.email %></p>
+        </div>
+        <% invitation = user.invitations.where(event_id: @event.id).first %>
+        <% if invitation %>
+          <% if invitation.status == "accepted" %>
+            <i class="fas fa-check"></i>
+          <% elsif invitation.status == "pending" %>
+            <i class="fas fa-history"></i>
+          <% elsif invitation.status == "rejected" %>
+            <i class="fas fa-times"></i>
+          <% end %>
+        <% else %>
+          <%= link_to(event_invite_path(@event, user), method: :post, remote: true) do %>
+            <i class="fas fa-plus"></i>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     <% end %>
   <% end %>
 </div>
