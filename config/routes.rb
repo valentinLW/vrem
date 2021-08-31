@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :events, only: %i[new create index show edit update] do
+    resources :uploads, only: %i[new create]
     resources :messages, only: %i[create]
     resources :invitations, only: %i[create index]
     get "messages", to: 'messages#show', as: :chat
