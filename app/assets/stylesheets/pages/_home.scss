@@ -9,10 +9,12 @@
   position: absolute;
 
   h1 {
+    margin-bottom: 3rem;
     font-size: 30px;
     text-align: center;
     padding-top: 30px;
     color: white;
+    text-transform: uppercase;
   }
 
   .btn-boton {
@@ -41,7 +43,7 @@
   justify-content: space-between;
   align-items: bottom;
   position: relative;
-  top: 50%;
+  top: 40%;
   align-items: center;
   padding: 30px
 }
