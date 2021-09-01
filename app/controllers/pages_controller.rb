@@ -4,4 +4,5 @@ class PagesController < ApplicationController
   def home
     @disable_header = true
   end
+
 end
