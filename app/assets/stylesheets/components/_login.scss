@@ -1,0 +1,66 @@
+.header-logo {
+  background-image: asset_url('logo_temp.jpg');
+  position: relative;
+  height: 20%;
+}
+
+.outter-box{
+  position: absolute;
+  top: 100px;
+  background-color: #fff;
+}
+
+.login {
+  text-align: center;
+  padding-top: 20%;
+  margin: 0 20px 0;
+  color: #000;
+}
+
+.welcome-title {
+  color: #000;
+  padding: 10px;
+}
+
+.welcome-descr {
+  color: #000;
+  padding: 10px 0 30px 0;
+}
+
+.form-group {
+  padding: 0 0 15px 0;
+}
+
+#user_email {
+  border-radius: 5px;
+}
+
+#user_password {
+  border-radius: 5px;
+}
+
+.btn-paradisio {
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-paradisio:hover {
+  color: #fff;
+  background-color: #173741;
+}
+
+.login_links {
+  padding: 20px 0 0 0;
+}
+
+.forgot-password {
+  padding: 0px 0 0 0;
+}
+
+.sign-up {
+  padding: 40px 0 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+}
