@@ -5,6 +5,6 @@
 <div class="container">
   <%= simple_form_for [ @event, @upload ]  do |f| %>
     <%= f.file_field :media, :multiple => true  %>
-    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= f.submit class: "btn btn-primary" %>
   <% end %>
 </div>

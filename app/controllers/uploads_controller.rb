@@ -1,4 +1,9 @@
 class UploadsController < ApplicationController
+
+  def index
+    @uploads = Upload.where(event_id: params[:event_id])
+  end
+
   def new
     @upload = Upload.new
     @event = Event.find(params[:event_id])
