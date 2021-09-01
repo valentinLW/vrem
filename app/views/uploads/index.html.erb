@@ -1,0 +1,11 @@
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <% @uploads.each do |upload| %>
+      <% upload.media.each do |image| %>
+        <div class="swiper-slide" id="<%= image.key %>"><%= cl_image_tag (image.key) %></div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

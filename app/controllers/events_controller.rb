@@ -12,6 +12,7 @@ class EventsController < ApplicationController
     @message = Message.new
     @invitation = Invitation.where(user: current_user).where(event: @event).first
     @markers = { lat: @event.latitude, lng: @event.longitude }
+    @uploads = Upload.where(event_id: params[:id])
   end
 
   def new
