@@ -1,8 +1,11 @@
 <header>
   <div class="header-group">
     <% unless @disable_back %>
-      <%= link_to('#',onclick: "window.history.back(); return false;", class:"header-link") do %>
+      <%= link_to('#',onclick: "javascript:history.go(-1); return false;", class:"header-link") do %>
         <i class="fas fa-angle-left"></i>
+      <% end%>
+      <%= link_to(events_path, class:"header-link") do %>
+        <i class="fas fa-home"></i>
       <% end%>
     <% end %>
   </div>
