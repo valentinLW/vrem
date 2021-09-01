@@ -1,31 +1,42 @@
-<h2>Sign up</h2>
+<div class="user-form">
+
+  <h2 class="welcome-title">Create your account!</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
+    <div class="vform-group">
+    <%= f.label :email %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: false,
                 input_html: { autocomplete: "email" }%>
+    </div>
+  <div class="vform-group">
+  <%= f.label :nickname %>
     <%= f.input :nickname,
                 required: true,
                 autofocus: true,
+                label: false,
                 input_html: { autocomplete: "nickname" }%>
+    </div>
+  <div class="vform-group">
+    <%= f.label :password %>
     <%= f.input :password,
                 required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                label: false,
                 input_html: { autocomplete: "new-password" } %>
+    </div>
+  <div class="vform-group">
+    <%= f.label :password_confirmation %>
     <%= f.input :password_confirmation,
                 required: true,
+                label: false,
                 input_html: { autocomplete: "new-password" } %>
+    </div>
     <%= f.input :profile_picture, as: :file,
+                label: false,
                 required: false %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up", :class => ' btn-paradisio' %>
-  </div>
+    <%= f.button :submit, "Sign up", :class => 'vform-submit' %>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>
