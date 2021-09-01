@@ -24,8 +24,12 @@
         <p><%= @event.description %></p>
       </div>
     </div>
+
     <div id="map"
       style="width: 100%;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
     </div>
+
+  <%= link_to "Get directions","https://www.google.com/maps/search/?api=1&query=#{@event.latitude},#{@event.longitude}", class:"btn btn-boton", style:"font-size:8px;padding:5px !important;margin-top:8px;margin-left:110px" %>
