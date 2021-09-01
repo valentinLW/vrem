@@ -1,27 +1,20 @@
-<div class="wholepage">
-  <div class="header-logo"></div>
-  <div class="outter-box" style="display: block">
+<div class="user-form">
 
-  <div class="login">
-
-<h2 class="welcome-title">Forgot your password?</h2>
-<p class="welcome-descr">Please put your email below.</p>
+  <h2 class="welcome-title">Forgot your password?</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="vform-group">
+    <%= f.label :email %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                placeholder: "Email",
                 label: false,
                 input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send request", :class => ' btn-paradisio' %>
-  </div>
+    <%= f.button :submit, "Send request", :class => 'vform-submit' %>
 <% end %>
 
   </div>
