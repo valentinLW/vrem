@@ -13,8 +13,8 @@
         <%= link_to("invite", event_invitations_path(@event), method: :get, class: "nbtn n-darkgreyish")%>
       <% end %>
       <% if @invitation && @invitation.status == "pending" %>
-        <%= link_to("accept", accept_path(@invitation), method: :patch, class: "nbtn btn-green") %>
-        <%= link_to("reject", reject_path(@invitation), method: :patch, class: "nbtn btn-red") %>
+        <%= link_to("accept", accept_path(@invitation), method: :patch, class: "nbtn n-darkgreyish") %>
+        <%= link_to("reject", reject_path(@invitation), method: :patch, class: "nbtn n-paradiso") %>
       <% else %>
         <%= link_to("upload", new_event_upload_path(@event), class: "nbtn n-paradiso") %>
       <% end %>
