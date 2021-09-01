@@ -1,58 +1,15 @@
-<div class="carousel-background">
-  <div class="container-carousel">
-    <br>
-    <br>
-    <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="2800" data-touch="true">
-      <!--Slides-->
-      <div class="carousel-inner" role="listbox">
-        <!--First slide-->
-        <div class="carousel-item active">
-          <%= image_tag "party1.jpg", class: "d-block w-100 carouselimg" %>
-          <h2 class="banner">Event? Vremennyy</h2>
-        </div>
-        <!--/First slide-->
-        <!--Second slide-->
-        <div class="carousel-item">
-          <%= image_tag "party2.jpg", class: "d-block w-100 carouselimg" %>
-          <h2 class="banner2">Plan everything</h2>
-        </div>
-        <!--/Second slide-->
-        <!--Third slide-->
-        <div class="carousel-item">
-          <%= image_tag "party3.jpg", class: "d-block w-100 carouselimg" %>
-          <h2 class="banner3">Upload Photos <br> <strong>Chat</strong> <br> Share</h2>
-        </div>
-        <!--/Third slide-->
-        <!--Fourth slide-->
-        <div class="carousel-item">
-          <%= image_tag "party4.jpg", class: "d-block w-100 carouselimg" %>
-          <h2 class="banner4">Meet new people. Discover the city.</h2>
-        </div>
-        <!--/Fourth slide-->
-      </div>
-      <!--/.Slides-->
-      <!--Controls-->
-      <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <!--/.Controls-->
+<div class="allofit">
+  <div class="flexbox-home">
+  <h1> Welcome! </h1>
+    <div class="links">
+      <%= link_to((user_session_path), method: :get, :class => 'btn-boton') do %>
+        Login
+      <% end%>
     </div>
-    <div class="flexbox-home">
-      <div class="links">
-        <%= link_to((user_session_path), method: :get, :class => 'btn-boton') do %>
-          Login
-        <% end%>
-      </div>
-      <div class="links">
-        <%= link_to((new_user_registration_path), method: :get, :class => 'btn-boton') do %>
-          Sign UP
-        <% end%>
-      </div>
+    <div class="links">
+      <%= link_to((new_user_registration_path), method: :get, :class => 'btn-boton') do %>
+        Sign UP
+      <% end%>
     </div>
   </div>
 </div>
