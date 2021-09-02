@@ -1,6 +1,6 @@
-<% coming = Invitation.where(event_id: @event.id).accepted.size %>
-
+<% coming = Invitation.where(event_id: @event.id).accepted.size - 1 %>
 <% attendees = Invitation.where(event_id: @event.id).pluck(:user_id, :status)%>
+<% attendees = attendees.reject {|a| a[0] == current_user.id } %>
   <p id="number" style="text-align: center"> <%= coming %> <%= coming !=1 ? "are" : "is" %> joining this event: </p>
 <div id="accordion">
   <div class="card">
