@@ -3,9 +3,9 @@
 }
 
 .event-header {
-  height: 30vh;
+  height: 35vh;
   object-fit: cover;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
   position: sticky;
   top: 0;
@@ -18,7 +18,7 @@
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   background-color: white;
-  margin-top: -3vh;
+  margin-top: -5vh;
   position: relative;
 
   #map {
