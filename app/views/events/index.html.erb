@@ -1,7 +1,9 @@
 <div class="swiper verticalSwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <%= render "calendar" %>
+      <div id="events_calendar">
+        <%= render partial: "calendar", locals: {events: @events} %>
+      </div>
     </div>
     <div class="swiper-slide">
       <%= render "events_index" %>

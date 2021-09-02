@@ -31,7 +31,9 @@
       </div>
     </div>
 
-    <%= link_to "Get directions","https://www.google.com/maps/search/?api=1&query=#{@event.latitude},#{@event.longitude}", class:"btn btn-boton", style:"font-size:8px;padding:5px !important;margin-top:8px;margin-left:110px" %>
+    <div style="text-align: center" >
+      <%= link_to "Get directions","https://www.google.com/maps/search/?api=1&query=#{@event.latitude},#{@event.longitude}", class:"nbtn in-aubergine"%>
+    </div>
 
     <div id="map"
       style="width: 100%;"

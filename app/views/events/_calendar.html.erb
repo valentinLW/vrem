@@ -1,14 +1,14 @@
 <div class="">
   <div class="swiper-header">
-  </div>
-  <%= month_calendar(events: @events, attribute: :start_time, end_attribute: :end_date) do |date, events| %>
-    <%= date.day %>
-    <% events.each do |event| %>
-      <%= link_to event_path(event) do %>
-      <div class="i-color" style="color:#14423f">
-        <i class="fas fa-glass-cheers"></i>
-      </div>
-      <% end %>
+    <%= month_calendar events: events, previous_link: events_ajax_previous_link, next_link: events_ajax_next_link do |date, events| %>
+      <%= date.day %>
+        <% events.each do |event| %>
+          <%= link_to event_path(event) do %>
+          <div class="i-color" style="color:#14423f">
+            <i class="fas fa-glass-cheers"></i>
+          </div>
+          <% end %>
+        <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
