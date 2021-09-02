@@ -3,12 +3,13 @@
 }
 
 .event-header {
+  display: block;
   height: 35vh;
   object-fit: cover;
   width: 100%;
   z-index: 1;
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 
 .event-description {
