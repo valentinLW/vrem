@@ -7,6 +7,7 @@ class UploadsController < ApplicationController
   def new
     @upload = Upload.new
     @event = Event.find(params[:event_id])
+    @disable_nav_right = @disable_home = true
   end
 
   def create

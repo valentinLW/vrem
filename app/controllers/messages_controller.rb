@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.new
+    @disable_home = @disable_nav_right = true
   end
 
   private

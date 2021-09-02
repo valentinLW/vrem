@@ -53,6 +53,11 @@
 .event-buttons {
   display: flex;
   justify-content: space-around;
+
+  a {
+    width: 30%;
+    text-align: center;
+  }
 }
 
 .event-details {

@@ -1,13 +1,21 @@
 <header>
   <div class="header-group">
     <% unless @disable_back %>
-      <%= link_to('#',onclick: "javascript:history.go(-1); return false;", class:"header-link") do %>
-        <i class="fas fa-angle-left"></i>
-      <% end%>
-      <%= link_to(events_path, class:"header-link") do %>
-        <i class="fas fa-home"></i>
+      <% if @back_home %>
+        <%= link_to(root_path, class:"header-link") do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% else %>
+        <%= link_to('#',onclick: "javascript:history.go(-1); return false;", class:"header-link") do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
       <% end%>
     <% end %>
+      <% unless @disable_home %>
+        <%= link_to(events_path, class:"header-link") do %>
+          <i class="fas fa-home"></i>
+        <% end%>
+      <% end %>
   </div>
   <div class="header-group">
   <% unless @disable_nav_right %>
