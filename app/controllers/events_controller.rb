@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
     @invitations = Invitation.where(user: current_user).where(status: :pending)
     @invited = Invitation.where(user: current_user).where(status: :accepted)
-    @disable_back = true
+    @disable_back = @disable_home = true
   end
 
   def show
@@ -13,11 +13,12 @@ class EventsController < ApplicationController
     @invitation = Invitation.where(user: current_user).where(event: @event).first
     @markers = { lat: @event.latitude, lng: @event.longitude }
     @uploads = Upload.where(event_id: params[:id])
+    @disable_back = true
   end
 
   def new
     @event = Event.new
-    @disable_nav_right = true
+    @disable_nav_right = @disable_home = true
   end
 
   def create
