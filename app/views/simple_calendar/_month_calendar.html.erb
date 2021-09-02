@@ -5,11 +5,11 @@
         <div class="col-10 offset-1">
           <div class="calendar-heading" style="text-align: center">
             <%= link_to calendar.url_for_previous_view do %>
-                <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-left extrapadding"></i><i class="fas fa-chevron-left"></i>
             <% end %>
             <span class="calendar-title"><%= t('date.month_names')[start_date.month].upcase %> <%= start_date.year %></span>
             <%= link_to calendar.url_for_next_view do %>
-              <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
+              <i class="fas fa-chevron-right extrapadding"></i><i class="fas fa-chevron-right"></i>
             <% end %>
           </div>
           <table class="table table-hover me-auto">
