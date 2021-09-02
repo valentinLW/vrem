@@ -4,6 +4,7 @@
 
   <h1>Welcome</h1>
   <h6> to VREMENNYY</h6>
+    <% if current_user.nil? %>
     <div class="links">
       <%= link_to((user_session_path), method: :get, :class => 'btn-boton') do %>
         Login
@@ -13,6 +14,11 @@
       <%= link_to((new_user_registration_path), method: :get, :class => 'btn-boton') do %>
         Sign UP
       <% end%>
+    <% else %>
+      <%= link_to((events_path), method: :get, :class => 'btn-boton') do %>
+        Let´s go
+      <% end%>
+    <% end %>
     </div>
   </div>
 </div>
