@@ -8,8 +8,8 @@
       <p><%= @event.user.nickname %></p>
     </div>
     <div class="event-buttons">
-      <%= link_to("chat", event_chat_path(@event), class: "nbtn in-aubergine") unless @event.start_time < Date.today %>
-      <% if @event.user_id == current_user.id %>
+      <%= link_to("chat", event_chat_path(@event), class: "nbtn n-aubergine") unless @event.start_time < Date.today %>
+      <% if @event.user_id == current_user.id && @event.start_time > Date.today %>
         <%= link_to("invite", event_invitations_path(@event), method: :get, class: "nbtn n-darkgreyish")%>
       <% end %>
       <% if @invitation && @invitation.status == "pending" %>

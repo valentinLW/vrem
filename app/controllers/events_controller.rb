@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   def index
     start_date = params.fetch(:start_time, Date.today).to_date
-    @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
-    @invitations = Invitation.where(user: current_user).where(status: :pending)
+    @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week).sort_by{|e| e.start_time}
+    @invitations = Invitation.where(user: current_user).where(status: :pending).sort_by{|a| a.event.start_time}
     @invited = Invitation.where(user: current_user).where(status: :accepted)
     @disable_back = @disable_home = true
   end
@@ -11,9 +11,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @message = Message.new
     @invitation = Invitation.where(user: current_user).where(event: @event).first
-    @markers = { lat: @event.latitude, lng: @event.longitude }
     @uploads = Upload.where(event_id: params[:id])
     @disable_back = true
+    @markers = {
+      lat: @event.latitude,
+      lng: @event.longitude
+     }
   end
 
   def new
