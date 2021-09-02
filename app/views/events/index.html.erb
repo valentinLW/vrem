@@ -1,22 +1,12 @@
 <div class="swiper verticalSwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <%= render "calendar" %>
+      <div id="events_calendar">
+        <%= render partial: "calendar", locals: {events: @events} %>
+      </div>
     </div>
     <div class="swiper-slide">
       <%= render "events_index" %>
     </div>
   </div>
 </div>
-
-<script>
-  var swiper = new Swiper(".verticalSwiper", {
-    direction: "vertical",
-    slidesPerView: 1.2,
-    initialSlide: 2,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>

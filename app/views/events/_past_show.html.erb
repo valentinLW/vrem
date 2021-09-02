@@ -11,8 +11,8 @@
   <% boxes = keys.each_slice(10).to_a %>
   <% boxes.each.with_index do |keys, index| %>
     <div class="uploads <%= index.even? ? "f-left" : "f-right" %>">
-      <% keys.each do |key| %>
-      <%= link_to cl_image_tag(key), event_uploads_path(@event, query:key)  %>
+      <% keys.each_with_index do |key, index| %>
+      <%= link_to cl_image_tag(key), event_uploads_path(@event, query: index)  %>
       <% end %>
     </div>
   <% end %>

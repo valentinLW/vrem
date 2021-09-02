@@ -1,7 +1,7 @@
 <div class="newuploadcontainer">
 <h1>Upload images</h1>
   <%= simple_form_for [ @event, @upload ]  do |f| %>
-    <%= f.file_field :media, :multiple => true  %>
+    <%= f.file_field :media, multiple: true  %>
     <%= f.submit class: "vform-submit" %>
   <% end %>
 </div>

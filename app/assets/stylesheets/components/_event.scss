@@ -68,8 +68,10 @@
   display: flex;
   margin-bottom: 1rem;
 
+
   p {
     margin-bottom: 0;
+    word-break: break-all;
   }
 
   .fatgrey {
