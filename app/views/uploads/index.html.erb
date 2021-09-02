@@ -8,3 +8,26 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
+
+<script>
+var urlString = window.location.href
+var url = new URL(urlString);
+var index = new Number(url.searchParams.get("query"));
+index += 1
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+swiper.slideTo(index)
+
+    </script>
