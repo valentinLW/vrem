@@ -6,7 +6,7 @@
     <div class="outter-box" style="display: block">
       <p class="titles"> UPCOMING EVENTS</p>
       <div class="upcoming" style="display: flex">
-      <% if events.size == 0 %>
+      <% if events.select{ |event| event.start_time > Date.today}.size == 0 %>
         <p class="p">You have 0 Upcoming events.</p>
       <% else %>
         <% events.each do |event|%>
