@@ -27,5 +27,5 @@ end
   private
 
 def upload_params
-  params.permit(media: [])
+  params.require(:upload).permit(media: [])
 end
