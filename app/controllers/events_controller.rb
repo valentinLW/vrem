@@ -2,8 +2,10 @@ class EventsController < ApplicationController
   def index
     start_date = params.fetch(:start_time, Date.today).to_date
     @events = Event.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week).sort_by{|e| e.start_time}
-    @invitations = Invitation.where(user: current_user).where(status: :pending).sort_by{|a| a.event.start_time}
-    @invited = Invitation.where(user: current_user).where(status: :accepted)
+    @invitations = Invitation.where(user: current_user).where(status: :pending)
+    @invitations = @invitations.map{|i| i.event }.sort_by{|e| e.start_time }
+    @upcoming_events = Invitation.where(user: current_user).where(status: :accepted)
+    @upcoming_events = @upcoming_events.select{ |invitation| invitation.event.start_time > Date.today }.map { |i| i.event }
     @disable_back = @disable_home = true
   end
 
