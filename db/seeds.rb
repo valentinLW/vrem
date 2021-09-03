@@ -6,7 +6,7 @@ users = [
   { name: "stan", url: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1625037044/xyvhwprahklgd6nke6rd.jpg'},
   { name: "ruy", url:  'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1627363623/dxcvc5uqkimpnpkhgswe.jpg'}
 ]
-users = []
+# users = []
 # create users if they dont exist yet
 users.each do |user|
   file = URI.open(user[:url])
