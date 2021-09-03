@@ -93,8 +93,8 @@
   .wday-6 {}
 
   .today {
-    background-color: #00f18180;
-    color: rgb(207, 19, 19);
+    background-color: #64fff880;
+    color: white;
   }
 
   .past {
@@ -115,8 +115,7 @@
   .current-month {}
 
   .has-events {
-    border: 3px dotted $paradiso;
-    background-color: white;
+    border: 3px dotted #ca84ff;
     opacity: 100%;
 
     i {
