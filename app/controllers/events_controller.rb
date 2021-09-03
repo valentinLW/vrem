@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     @invitations = Invitation.where(user: current_user).where(status: :pending)
     @invitations = @invitations.map{|i| i.event }.sort_by{|e| e.start_time }
     @upcoming_events = Invitation.where(user: current_user).where(status: :accepted)
-    @upcoming_events = @upcoming_events.select{ |invitation| invitation.event.start_time > Date.today }.map { |i| i.event }
+    @upcoming_events = @upcoming_events.select{ |invitation| invitation.event.start_time > Date.today }.map { |i| i.event }.sort_by{|e| e.start_time }
     @disable_back = @disable_home = true
   end
 
