@@ -6,7 +6,7 @@
       <div class="invite-container">
         <%= cl_image_tag(user.profile_picture.key, class: "") %>
         <div>
-          <p class="nickname"><%= user.nickname %></p>
+          <p class="nickname"><%= user.nickname.capitalize %></p>
           <p class="email"><%= user.email %></p>
         </div>
         <% invitation = user.invitations.where(event_id: @event.id).first %>
