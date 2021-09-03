@@ -1,5 +1,5 @@
-kitt = %w[santiagosan93 Sarowa158 alshahwan abyadb bbruck SilviaCastagna frauchan Xue1515 andxblink maydang blackgee jennyglassmyer] # mariushepp jhibbeard89 OtmarJe Laklemme ForestFlowerr pab-mich lmllr philipp-no FabrizioOnorio MichaelRosenfeld mcrunge CheyenneTallulaBlue NayyabShah yoricktf AdamTomczyk]
-names = %w[santi benedikt mohammad douglas bernard silvia christine xue andreas may gabriel jennifer]
+kitt = %w[pab-mich santiagosan93 Sarowa158 alshahwan abyadb bbruck SilviaCastagna frauchan Xue1515 andxblink maydang blackgee jennyglassmyer] # mariushepp jhibbeard89 OtmarJe Laklemme ForestFlowerr pab-mich lmllr philipp-no FabrizioOnorio MichaelRosenfeld mcrunge CheyenneTallulaBlue NayyabShah yoricktf AdamTomczyk]
+names = %w[pablo santi benedikt mohammad douglas bernard silvia christine xue andreas may gabriel jennifer]
 users = [
   { name: "marina", url: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1626782776/qxjbfihftnyi9phgnb3l.jpg'},
   { name: "valentin", url: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1626805000/yppphiokhswqo7b4ar1b.jpg'},
