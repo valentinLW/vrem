@@ -2,16 +2,22 @@
     "master_picture": "app/assets/images/favicon.png",
     "favicon_design": {
         "ios": {
-            "picture_aspect": "no_change",
+            "picture_aspect": "background_and_margin",
+            "background_color": "#000000",
+            "margin": "0%",
             "assets": {
                 "ios6_and_prior_icons": false,
-                "ios7_and_later_icons": false,
+                "ios7_and_later_icons": true,
                 "precomposed_icons": false,
                 "declare_only_default_icon": true
-            }
+            },
+            "app_name": "Vremennyy"
         },
         "desktop_browser": {
-            "design": "raw"
+            "design": "background",
+            "backgroundColor": "#333333",
+            "backgroundRadius": 0.4,
+            "imageScale": 0.9
         },
         "windows": {
             "picture_aspect": "no_change",
@@ -25,12 +31,16 @@
                     "big": false,
                     "rectangle": false
                 }
-            }
+            },
+            "app_name": "Vremennyy"
         },
         "android_chrome": {
-            "picture_aspect": "no_change",
+            "picture_aspect": "background_and_margin",
+            "margin": "0%",
+            "background_color": "#ffffff",
             "theme_color": "#ffffff",
             "manifest": {
+                "name": "Vremennyy",
                 "display": "standalone",
                 "orientation": "not_set",
                 "on_conflict": "override",
@@ -42,7 +52,8 @@
             }
         },
         "safari_pinned_tab": {
-            "picture_aspect": "silhouette",
+            "picture_aspect": "black_and_white",
+            "threshold": 70.9375,
             "theme_color": "#5bbad5"
         }
     },
