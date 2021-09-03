@@ -6,10 +6,10 @@
     <div class="outter-box" style="display: block">
       <p class="titles"> UPCOMING EVENTS</p>
       <div class="upcoming" style="display: flex">
-      <% if events.select{ |event| event.start_time > Date.today}.size == 0 %>
+      <% if upcomings.size == 0 %>
         <p class="p">You have 0 Upcoming events.</p>
       <% else %>
-        <% events.each do |event|%>
+        <% upcomings.each do |event|%>
           <% if event.start_time > Date.today %>
             <%= render "eventcards", event:event %>
           <% end %>
@@ -20,12 +20,12 @@
     <div class="outter-box" style="display: block">
       <p class="titles nomargin"> INVITATIONS </p>
       <div class="invitations" style="display: flex">
-      <% if invitations.select{ |i| i.event.start_time > Date.today}.size == 0 %>
+      <% if invitations.size == 0 %>
         <p class="p">You have 0 pending Invitations.</p>
       <% else %>
-        <% invitations.each do |i|%>
-          <% if i.event.start_time > Date.today %>
-            <%= render "eventcards", event:i.event %>
+        <% invitations.each do |event|%>
+          <% if event.start_time > Date.today %>
+            <%= render "eventcards", event:event %>
           <% end %>
         <% end %>
       <% end %>
